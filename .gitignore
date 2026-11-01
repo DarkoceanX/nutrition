@@ -1,6 +1,8 @@
 # Создан VibeForge при включении контроля версий — правьте как угодно.
 node_modules/
 dist/
+!nutrition-site/dist/
+!nutrition-site/dist/**
 build/
 .next/
 target/

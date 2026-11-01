@@ -1,0 +1,38 @@
+САЙТ «В СВОЁМ РИТМЕ»
+
+Основа: D:/nutrition/nutrition_brand_strategy.docx. Дополнительный контекст: «Бренд-протокол нутрициолога (1).docx».
+
+Решения по содержанию
+Новая стратегия имеет приоритет перед исходным бренд-протоколом. Для первой версии использована минимальная страница доверия и записи: аудитория, бытовая задача, подход, консультация, вопросы и обращение. Из исходного протокола не перенесены неподтверждённые медицинские обещания, цены 20 000/75 000 рублей, отзывы, регалии, гарантии результата и клуб.
+Аудитория первой версии — взрослые с плотным расписанием, которым неудобно организовывать повседневное питание. Это рабочая гипотеза стратегии, а не подтверждённое исследование аудитории.
+Предложение из стратегии: онлайн-встреча 45–60 минут, письменное резюме с двумя-тремя шагами и короткая связь через неделю. Условия согласуются до оплаты.
+«В своём ритме» — предложенное рабочее название. Имя специалиста, квалификация и конкретная стоимость не предоставлены. Перед открытием сайта для клиентов их следует дополнить; состав услуги также подтвердить.
+
+Дизайн
+Молочный фон, шалфейный зелёный и мягкий персиковый. Крупные заголовки с засечками, простой основной текст, лёгкие скругления, заметная запись на консультацию.
+
+Запись
+Получатель подтверждён пользователем: mariiapshenychna@gmail.com.
+Форма не отправляет письмо автоматически и не бронирует время. Она составляет редактируемый текст, создаёт mailto-ссылку и позволяет скопировать текст. Посетитель самостоятельно отправляет письмо через свой почтовый сервис. Доставка письма в почтовый ящик при проверке не проверялась, тестовое письмо не отправлялось.
+Поля формы: имя или псевдоним, общая тема, необязательное время связи. Сайт не сохраняет поля, не использует аналитические пиксели и локальное хранилище. Текст о данных описывает фактическое поведение формы; он не заменяет документы исполнителя.
+
+Техническая структура
+dist/index.html — страница и тексты.
+dist/styles.css — оформление и адаптивные размеры.
+dist/app.js — форма, окно письма, копирование, окно информации о данных.
+dist/assets/hero.png — изображение первого экрана.
+dist/assets/mark.svg — знак бренда.
+.openai/hosting.json — идентификатор Sites и каталог публикации.
+serve.mjs — локальный сервер, запуск: node serve.mjs. Адрес: http://127.0.0.1:4173.
+Сайт публикуется приватно, доступ только владельцу. noindex установлен для текущей версии. Перед публичным запуском следует отдельно обновить доступ и метаданные индексации.
+
+Проверки 17 октября 2026
+JavaScript: node --check dist/app.js — успешно.
+Локальный сервер: HTTP 200.
+Браузер: первый экран на настольном и мобильном размере, загрузка изображений, отсутствие горизонтального переполнения, корректность внутренних якорей, отсутствие ошибок в консоли.
+Форма: создание письма с именем, выбранной темой и временем; адрес получателя и кодирование русскоязычного текста в mailto подтверждены.
+
+Изображение
+Создано встроенным ImageGen, сохранено в dist/assets/hero.png.
+Финальный промпт:
+Use case: photorealistic-natural. Asset type: editorial photograph for a Russian nutrition consultation website. Create a sophisticated quiet natural still-life photograph, portrait aspect ratio 4:5. Warm ivory plaster kitchen surface, soft morning sunlight from the upper left. A pale sage green handmade ceramic bowl containing a simple everyday lunch: grains, cucumber, leafy greens, sliced tomatoes; next to it a whole green pear, half a pear, a small off-white ceramic cup and casually draped oatmeal linen napkin. Asymmetrical, airy composition shot at a 45 degree angle, visually centered around the bowl and pear, authentic ordinary food rather than perfection or diet advertising. Matte tactile textures, soft shadows, slightly grainy editorial film photography, muted sage, butter yellow, cream and subtle peach colors. Restrained premium independent magazine aesthetic. No people, text, labels, logos, watermark, supplements, medical tools, measuring tapes, UI or decorative frames.
