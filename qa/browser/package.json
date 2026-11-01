@@ -4,7 +4,9 @@
   "type": "module",
   "scripts": {
     "check": "node check.mjs",
-    "demo": "node demo.mjs"
+    "demo": "node demo.mjs",
+    "preview:export": "node export-preview.mjs",
+    "preview:check": "node check-offline.mjs"
   },
   "devDependencies": {
     "axe-core": "4.14.0",

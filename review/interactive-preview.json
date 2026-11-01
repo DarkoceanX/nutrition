@@ -1,0 +1,14 @@
+{
+  "createdAt": "2026-11-01T16:51:23.825Z",
+  "source": "nutrition-site/dist",
+  "files": {
+    "index.html": "8bcb421fdc47061a11073d1cdc92313fa33c3c84f31b70df96a3741c16f930e2",
+    "styles.css": "7e6d93e20ac848a21a438c62f1c08b1dca678b88ed4871c3354d64a28e562522",
+    "app.js": "00445a1aea42f8320cb739a08a911cb4f32631266223e5be0584dc94358adc93",
+    "assets/mark.svg": "641081ac782edac7b6c69ca423046cc4a3dad9b57b116a907266e27f2511e418",
+    "assets/hero.png": "c790084147484bdd140e722b9cf5d1700e94819591f5c514d8236f3b741a145e"
+  },
+  "output": "interactive-preview.html",
+  "outputSha256": "ab83af641f6db06fbde14f8f4e7af7ae9fc4663218310a91ca7baaa41e439029",
+  "bytes": 3591988
+}
