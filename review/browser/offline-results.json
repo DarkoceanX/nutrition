@@ -1,0 +1,198 @@
+{
+  "date": "2026-11-01T16:55:09.276Z",
+  "sourceURL": "http://127.0.0.1:5601/",
+  "preview": "review/interactive-preview.html",
+  "sha256": "ab83af641f6db06fbde14f8f4e7af7ae9fc4663218310a91ca7baaa41e439029",
+  "engines": [
+    {
+      "engine": "chromium",
+      "version": "156.0.8078.4",
+      "status": "STARTED"
+    },
+    {
+      "engine": "firefox",
+      "version": "157.0",
+      "status": "STARTED"
+    }
+  ],
+  "cases": [
+    {
+      "engine": "chromium",
+      "id": "OFF01",
+      "title": "Загрузка файла без сети и совпадение с исходным сайтом",
+      "evidence": {
+        "matchingSource": true,
+        "images": [
+          {
+            "embedded": true,
+            "loaded": true
+          },
+          {
+            "embedded": true,
+            "loaded": true
+          },
+          {
+            "embedded": true,
+            "loaded": true
+          }
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "id": "OFF02",
+      "title": "Внутренние ссылки и все вопросы FAQ",
+      "evidence": {
+        "links": 11,
+        "faq": 5
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "id": "OFF03",
+      "title": "Валидация формы, четыре темы и редактирование письма",
+      "evidence": {
+        "topics": 4,
+        "externalMailIntercepted": true
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "id": "OFF04",
+      "title": "Копирование и выделение текста при отказе буфера",
+      "evidence": {
+        "normalStatus": "Автоматическое копирование недоступно. Текст выделен: скопируйте его вручную и вставьте в письмо.",
+        "fallbackSelection": true
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "id": "OFF05",
+      "title": "Оба окна: крестик, Escape и нажатие на фон",
+      "evidence": {
+        "dialogs": 2,
+        "closingMethods": 3
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "id": "OFF06",
+      "title": "Просмотр на ширине 320, 375 и 1440 пикселей",
+      "evidence": {
+        "widths": [
+          320,
+          375,
+          1440
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "id": "OFF07",
+      "title": "Нет ошибок JavaScript и обращений к HTTP-серверам",
+      "evidence": {
+        "errors": [],
+        "httpRequests": [],
+        "offline": true
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "firefox",
+      "id": "OFF01",
+      "title": "Загрузка файла без сети и совпадение с исходным сайтом",
+      "evidence": {
+        "matchingSource": true,
+        "images": [
+          {
+            "embedded": true,
+            "loaded": true
+          },
+          {
+            "embedded": true,
+            "loaded": true
+          },
+          {
+            "embedded": true,
+            "loaded": true
+          }
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "firefox",
+      "id": "OFF02",
+      "title": "Внутренние ссылки и все вопросы FAQ",
+      "evidence": {
+        "links": 11,
+        "faq": 5
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "firefox",
+      "id": "OFF03",
+      "title": "Валидация формы, четыре темы и редактирование письма",
+      "evidence": {
+        "topics": 4,
+        "externalMailIntercepted": true
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "firefox",
+      "id": "OFF04",
+      "title": "Копирование и выделение текста при отказе буфера",
+      "evidence": {
+        "normalStatus": "Текст скопирован. Вставьте его в письмо для mariiapshenychna@gmail.com и отправьте со своей почты.",
+        "fallbackSelection": true
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "firefox",
+      "id": "OFF05",
+      "title": "Оба окна: крестик, Escape и нажатие на фон",
+      "evidence": {
+        "dialogs": 2,
+        "closingMethods": 3
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "firefox",
+      "id": "OFF06",
+      "title": "Просмотр на ширине 320, 375 и 1440 пикселей",
+      "evidence": {
+        "widths": [
+          320,
+          375,
+          1440
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "firefox",
+      "id": "OFF07",
+      "title": "Нет ошибок JavaScript и обращений к HTTP-серверам",
+      "evidence": {
+        "errors": [],
+        "httpRequests": [],
+        "offline": true
+      },
+      "status": "PASS"
+    }
+  ],
+  "summary": {
+    "passed": 14,
+    "failed": 0
+  }
+}

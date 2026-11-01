@@ -1,0 +1,1526 @@
+{
+  "date": "2026-11-01T16:22:00.298Z",
+  "url": "http://127.0.0.1:5601/",
+  "files": {
+    "nutrition-site/dist/index.html": "8bcb421fdc47061a11073d1cdc92313fa33c3c84f31b70df96a3741c16f930e2",
+    "nutrition-site/dist/styles.css": "7e6d93e20ac848a21a438c62f1c08b1dca678b88ed4871c3354d64a28e562522",
+    "nutrition-site/dist/app.js": "00445a1aea42f8320cb739a08a911cb4f32631266223e5be0584dc94358adc93",
+    "nutrition-site/serve.mjs": "cb591b33caa41bacd38f09e18e6b77f248dcb31153ed0d64fac2f8d80a3edfb6"
+  },
+  "engines": [
+    {
+      "engine": "chromium",
+      "status": "STARTED",
+      "version": "156.0.8078.4"
+    },
+    {
+      "engine": "firefox",
+      "status": "STARTED",
+      "version": "157.0"
+    }
+  ],
+  "cases": [
+    {
+      "engine": "chromium",
+      "id": "B01",
+      "title": "Загрузка страницы, скрипта, стилей и изображений",
+      "evidence": {
+        "images": [
+          {
+            "src": "assets/mark.svg",
+            "loaded": true,
+            "width": 48,
+            "height": 48
+          },
+          {
+            "src": "assets/hero.png",
+            "loaded": true,
+            "width": 1122,
+            "height": 1402
+          },
+          {
+            "src": "assets/mark.svg",
+            "loaded": true,
+            "width": 48,
+            "height": 48
+          }
+        ],
+        "resources": [
+          {
+            "url": "http://127.0.0.1:5601/styles.css",
+            "bytes": 19901,
+            "duration": 16
+          },
+          {
+            "url": "http://127.0.0.1:5601/app.js",
+            "bytes": 3479,
+            "duration": 16
+          },
+          {
+            "url": "http://127.0.0.1:5601/assets/mark.svg",
+            "bytes": 671,
+            "duration": 16
+          },
+          {
+            "url": "http://127.0.0.1:5601/assets/hero.png",
+            "bytes": 2661674,
+            "duration": 90
+          }
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "id": "B02",
+      "title": "Все внутренние ссылки, пункты меню и кнопки записи",
+      "evidence": [
+        {
+          "text": "Перейти к содержанию",
+          "href": "#main"
+        },
+        {
+          "text": "в своём ритме\nконсультации по питанию",
+          "href": "#"
+        },
+        {
+          "text": "Для кого",
+          "href": "#for-you"
+        },
+        {
+          "text": "Подход",
+          "href": "#approach"
+        },
+        {
+          "text": "Консультация",
+          "href": "#consultation"
+        },
+        {
+          "text": "Вопросы",
+          "href": "#faq"
+        },
+        {
+          "text": "Записаться\n↗",
+          "href": "#booking"
+        },
+        {
+          "text": "Записаться на консультацию\n↗",
+          "href": "#booking"
+        },
+        {
+          "text": "Обсудить консультацию\n↗",
+          "href": "#booking"
+        },
+        {
+          "text": "в своём ритме\nконсультации по питанию",
+          "href": "#"
+        },
+        {
+          "text": "Записаться на консультацию ↗",
+          "href": "#booking"
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "id": "B03",
+      "title": "Каждый вопрос FAQ: открытие и закрытие мышью и клавиатурой",
+      "evidence": [
+        "С каким запросом можно прийти?\n+",
+        "Нужно ли готовиться или сдавать анализы?\n+",
+        "Это медицинская консультация?\n+",
+        "Сколько стоит консультация?\n+",
+        "Как перенести или отменить встречу?\n+"
+      ],
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "id": "B04",
+      "title": "Обязательные поля и имя из пробелов",
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "id": "B05",
+      "title": "Все темы, кириллица, спецсимволы и необязательное время",
+      "evidence": [
+        {
+          "topic": "Питание в рабочем графике",
+          "optionalTime": false,
+          "body": "Здравствуйте! Хочу записаться на консультацию по питанию.\n\nМеня зовут Тест Анна & ? # % + «проверка».\nМой запрос: Питание в рабочем графике.\nУдобное время для связи: Тест: 19:00 & 21:00 ? # %.\n\nПодскажите, пожалуйста, стоимость, условия и доступное время для онлайн-встречи.\n\nСпасибо!"
+        },
+        {
+          "topic": "Покупки и планирование еды",
+          "optionalTime": true,
+          "body": "Здравствуйте! Хочу записаться на консультацию по питанию.\n\nМеня зовут Тест Анна & ? # % + «проверка».\nМой запрос: Покупки и планирование еды.\n\nПодскажите, пожалуйста, стоимость, условия и доступное время для онлайн-встречи.\n\nСпасибо!"
+        },
+        {
+          "topic": "Повседневные привычки",
+          "optionalTime": false,
+          "body": "Здравствуйте! Хочу записаться на консультацию по питанию.\n\nМеня зовут Тест Анна & ? # % + «проверка».\nМой запрос: Повседневные привычки.\nУдобное время для связи: Тест: 19:00 & 21:00 ? # %.\n\nПодскажите, пожалуйста, стоимость, условия и доступное время для онлайн-встречи.\n\nСпасибо!"
+        },
+        {
+          "topic": "Хочу обсудить свой запрос",
+          "optionalTime": false,
+          "body": "Здравствуйте! Хочу записаться на консультацию по питанию.\n\nМеня зовут Тест Анна & ? # % + «проверка».\nМой запрос: Хочу обсудить свой запрос.\nУдобное время для связи: Тест: 19:00 & 21:00 ? # %.\n\nПодскажите, пожалуйста, стоимость, условия и доступное время для онлайн-встречи.\n\nСпасибо!"
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "id": "B06",
+      "title": "Редактирование письма и обе почтовые ссылки",
+      "evidence": {
+        "targets": [
+          "mailto:mariiapshenychna@gmail.com?subject=%D0%97%D0%B0%D1%8F%D0%B2%D0%BA%D0%B0%20%D0%BD%D0%B0%20%D0%BA%D0%BE%D0%BD%D1%81%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%86%D0%B8%D1%8E%20%D0%BF%D0%BE%20%D0%BF%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D1%8E&body=%D0%A2%D0%B5%D1%81%D1%82%3A%20%D0%B8%D0%B7%D0%BC%D0%B5%D0%BD%D1%91%D0%BD%D0%BD%D0%BE%D0%B5%20%D0%BF%D0%B8%D1%81%D1%8C%D0%BC%D0%BE.%20%D0%9A%D0%B8%D1%80%D0%B8%D0%BB%D0%BB%D0%B8%D1%86%D0%B0%20%26%20%3F%20%23%20%25%20%2B%20%3D%20%2F%0A%D0%92%D1%82%D0%BE%D1%80%D0%B0%D1%8F%20%D1%81%D1%82%D1%80%D0%BE%D0%BA%D0%B0.",
+          "mailto:mariiapshenychna@gmail.com"
+        ],
+        "boundary": "Переход перехвачен перед запуском внешней почты; письма не отправлялись."
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "id": "B07",
+      "title": "Копирование письма и сброс статуса при повторном открытии",
+      "evidence": {
+        "status": "Текст скопирован. Вставьте его в письмо для mariiapshenychna@gmail.com и отправьте со своей почты.",
+        "readBackVerified": true
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "id": "B08",
+      "title": "Отказ API буфера: выделение текста для ручного копирования",
+      "evidence": {
+        "focused": true,
+        "start": 0,
+        "end": 284,
+        "length": 284,
+        "fault": "Отказ API смоделирован тестом; выполняется настоящий обработчик приложения."
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "id": "B09",
+      "title": "Оба диалога: крестик, Escape, фон, фокус и Tab",
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "id": "B10",
+      "title": "Форма целиком с клавиатуры и видимый фокус",
+      "evidence": {
+        "active": true,
+        "outline": "solid"
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "id": "B11",
+      "title": "Ограничения длины полей и текста письма",
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "id": "V320",
+      "title": "Страница и оба окна при 320 × 780",
+      "evidence": {
+        "width": 320,
+        "scrollWidth": 320,
+        "menuVisible": false,
+        "dialogs": [
+          {
+            "selector": "#email-dialog",
+            "bounds": {
+              "left": 16,
+              "right": 304,
+              "top": 50.21875,
+              "bottom": 729.765625,
+              "clientWidth": 286,
+              "scrollWidth": 286
+            }
+          },
+          {
+            "selector": "#privacy-dialog",
+            "bounds": {
+              "left": 16,
+              "right": 304,
+              "top": 67.9375,
+              "bottom": 712.046875,
+              "clientWidth": 286,
+              "scrollWidth": 286
+            }
+          }
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "id": "V375",
+      "title": "Страница и оба окна при 375 × 812",
+      "evidence": {
+        "width": 375,
+        "scrollWidth": 375,
+        "menuVisible": false,
+        "dialogs": [
+          {
+            "selector": "#email-dialog",
+            "bounds": {
+              "left": 16,
+              "right": 359,
+              "top": 77.015625,
+              "bottom": 734.96875,
+              "clientWidth": 341,
+              "scrollWidth": 341
+            }
+          },
+          {
+            "selector": "#privacy-dialog",
+            "bounds": {
+              "left": 16,
+              "right": 359,
+              "top": 105.53125,
+              "bottom": 706.453125,
+              "clientWidth": 341,
+              "scrollWidth": 341
+            }
+          }
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "id": "V768",
+      "title": "Страница и оба окна при 768 × 1024",
+      "evidence": {
+        "width": 768,
+        "scrollWidth": 768,
+        "menuVisible": false,
+        "dialogs": [
+          {
+            "selector": "#email-dialog",
+            "bounds": {
+              "left": 94,
+              "right": 674,
+              "top": 211.296875,
+              "bottom": 812.6875,
+              "clientWidth": 578,
+              "scrollWidth": 578
+            }
+          },
+          {
+            "selector": "#privacy-dialog",
+            "bounds": {
+              "left": 94,
+              "right": 674,
+              "top": 288.359375,
+              "bottom": 735.625,
+              "clientWidth": 578,
+              "scrollWidth": 578
+            }
+          }
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "id": "V1440",
+      "title": "Страница и оба окна при 1440 × 900",
+      "evidence": {
+        "width": 1440,
+        "scrollWidth": 1440,
+        "menuVisible": true,
+        "dialogs": [
+          {
+            "selector": "#email-dialog",
+            "bounds": {
+              "left": 430,
+              "right": 1010,
+              "top": 149.296875,
+              "bottom": 750.6875,
+              "clientWidth": 578,
+              "scrollWidth": 578
+            }
+          },
+          {
+            "selector": "#privacy-dialog",
+            "bounds": {
+              "left": 430,
+              "right": 1010,
+              "top": 226.359375,
+              "bottom": 673.625,
+              "clientWidth": 578,
+              "scrollWidth": 578
+            }
+          }
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "id": "V812",
+      "title": "Страница и оба окна при 812 × 375",
+      "evidence": {
+        "width": 812,
+        "scrollWidth": 812,
+        "menuVisible": true,
+        "dialogs": [
+          {
+            "selector": "#email-dialog",
+            "bounds": {
+              "left": 116,
+              "right": 696,
+              "top": 18.75,
+              "bottom": 356.25,
+              "clientWidth": 578,
+              "scrollWidth": 578
+            }
+          },
+          {
+            "selector": "#privacy-dialog",
+            "bounds": {
+              "left": 116,
+              "right": 696,
+              "top": 18.75,
+              "bottom": 356.25,
+              "clientWidth": 578,
+              "scrollWidth": 578
+            }
+          }
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "id": "V200",
+      "title": "Эмуляция рабочей области 720 × 450 для масштаба 200%",
+      "evidence": {
+        "width": 720,
+        "scrollWidth": 720,
+        "method": "Рабочая область в CSS-пикселях уменьшена вдвое от 1440 × 900. Настоящий Ctrl+Plus и системный масштаб не проверены."
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "id": "A01",
+      "title": "Автоматическая проверка доступности страницы и диалогов",
+      "status": "FAIL",
+      "error": "Обнаружены нарушения доступности; см. отдельный JSON",
+      "evidence": [
+        {
+          "state": "page",
+          "violations": [
+            {
+              "id": "color-contrast",
+              "impact": "serious",
+              "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axeAPI",
+              "nodes": [
+                {
+                  "target": [
+                    ".photo-caption > p > span"
+                  ],
+                  "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.23 (foreground color: #66705f, background color: #eee8d6, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1"
+                },
+                {
+                  "target": [
+                    "article:nth-child(1) > .number"
+                  ],
+                  "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.78 (foreground color: #737b68, background color: #efeee5, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1"
+                },
+                {
+                  "target": [
+                    "article:nth-child(1) > p"
+                  ],
+                  "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.45 (foreground color: #66705f, background color: #efeee5, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+                },
+                {
+                  "target": [
+                    "article:nth-child(2) > .number"
+                  ],
+                  "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.54 (foreground color: #737b68, background color: #eee5dc, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1"
+                },
+                {
+                  "target": [
+                    "article:nth-child(2) > p"
+                  ],
+                  "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.16 (foreground color: #66705f, background color: #eee5dc, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+                },
+                {
+                  "target": [
+                    "article:nth-child(3) > .number"
+                  ],
+                  "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.68 (foreground color: #737b68, background color: #e8ece3, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1"
+                },
+                {
+                  "target": [
+                    "article:nth-child(3) > p"
+                  ],
+                  "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.33 (foreground color: #66705f, background color: #e8ece3, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+                },
+                {
+                  "target": [
+                    ".paper-footer"
+                  ],
+                  "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.45 (foreground color: #6b795b, background color: #fcfaf4, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+                },
+                {
+                  "target": [
+                    ".art-note"
+                  ],
+                  "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.71 (foreground color: #6d7760, background color: #e2e6d8, font size: 6.8pt (9px), font weight: normal). Expected contrast ratio of 4.5:1"
+                },
+                {
+                  "target": [
+                    ".approach-point:nth-child(4) > span"
+                  ],
+                  "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.45 (foreground color: #788568, background color: #f1f1e9, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1"
+                },
+                {
+                  "target": [
+                    ".approach-point:nth-child(5) > span"
+                  ],
+                  "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.45 (foreground color: #788568, background color: #f1f1e9, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1"
+                },
+                {
+                  "target": [
+                    ".approach-point:nth-child(6) > span"
+                  ],
+                  "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.45 (foreground color: #788568, background color: #f1f1e9, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1"
+                },
+                {
+                  "target": [
+                    "ul > li:nth-child(1) > span"
+                  ],
+                  "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.22 (foreground color: #78856c, background color: #e6ebdf, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1"
+                },
+                {
+                  "target": [
+                    "li:nth-child(1) > div > p"
+                  ],
+                  "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.46 (foreground color: #616e58, background color: #e6ebdf, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+                },
+                {
+                  "target": [
+                    "ul > li:nth-child(2) > span"
+                  ],
+                  "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.22 (foreground color: #78856c, background color: #e6ebdf, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1"
+                },
+                {
+                  "target": [
+                    "li:nth-child(2) > div > p"
+                  ],
+                  "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.46 (foreground color: #616e58, background color: #e6ebdf, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+                },
+                {
+                  "target": [
+                    "ul > li:nth-child(3) > span"
+                  ],
+                  "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.22 (foreground color: #78856c, background color: #e6ebdf, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1"
+                },
+                {
+                  "target": [
+                    "li:nth-child(3) > div > p"
+                  ],
+                  "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.46 (foreground color: #616e58, background color: #e6ebdf, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+                },
+                {
+                  "target": [
+                    ".booking-copy > p:nth-child(3)"
+                  ],
+                  "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.23 (foreground color: #6b6d5e, background color: #f1e4d8, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+                },
+                {
+                  "target": [
+                    ".direct-note"
+                  ],
+                  "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.88 (foreground color: #717363, background color: #f1e4d8, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1"
+                },
+                {
+                  "target": [
+                    ".form-privacy"
+                  ],
+                  "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.28 (foreground color: #747866, background color: #fbf8f1, font size: 6.8pt (9px), font weight: normal). Expected contrast ratio of 4.5:1"
+                },
+                {
+                  "target": [
+                    ".form-note"
+                  ],
+                  "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.37 (foreground color: #717765, background color: #fbf8f1, font size: 6.8pt (9px), font weight: normal). Expected contrast ratio of 4.5:1"
+                },
+                {
+                  "target": [
+                    ".footer-bottom > span:nth-child(1)"
+                  ],
+                  "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.07 (foreground color: #737b68, background color: #f7f6f0, font size: 6.8pt (9px), font weight: normal). Expected contrast ratio of 4.5:1"
+                },
+                {
+                  "target": [
+                    "#privacy-button"
+                  ],
+                  "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.07 (foreground color: #737b68, background color: #f7f6f0, font size: 6.8pt (9px), font weight: normal). Expected contrast ratio of 4.5:1"
+                },
+                {
+                  "target": [
+                    ".footer-bottom > span:nth-child(3)"
+                  ],
+                  "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.07 (foreground color: #737b68, background color: #f7f6f0, font size: 6.8pt (9px), font weight: normal). Expected contrast ratio of 4.5:1"
+                }
+              ]
+            }
+          ],
+          "incomplete": [
+            {
+              "id": "aria-prohibited-attr",
+              "nodes": 1
+            },
+            {
+              "id": "color-contrast",
+              "nodes": 8
+            }
+          ],
+          "passes": 26
+        },
+        {
+          "state": "email",
+          "violations": [],
+          "incomplete": [],
+          "passes": 19
+        },
+        {
+          "state": "privacy",
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 3
+            }
+          ],
+          "passes": 13
+        }
+      ],
+      "screenshot": "chromium-A01-failure.png"
+    },
+    {
+      "engine": "chromium",
+      "id": "B12",
+      "title": "Ошибки браузера и отсутствие сохранённых полей",
+      "evidence": {
+        "storage": {
+          "local": 0,
+          "session": 0,
+          "cookie": ""
+        },
+        "consoleErrors": [],
+        "pageErrors": [],
+        "failedRequests": []
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "id": "F-no-js-click",
+      "title": "Форма без рабочего JavaScript: no-js, click",
+      "status": "FAIL",
+      "error": "Имя, тема и время отправлены GET-запросом в URL сайта",
+      "evidence": {
+        "outgoing": [
+          {
+            "method": "GET",
+            "url": "http://127.0.0.1:5601/?name=%D0%A2%D0%B5%D1%81%D1%82+%D0%90%D0%BD%D0%BD%D0%B0+%26+%3F+%23+%25+%2B+%C2%AB%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D0%B0%C2%BB&topic=%D0%9F%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D0%B5+%D0%B2+%D1%80%D0%B0%D0%B1%D0%BE%D1%87%D0%B5%D0%BC+%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D0%BA%D0%B5&time=%D0%A2%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D0%BE%D0%B5+%D0%B2%D1%80%D0%B5%D0%BC%D1%8F"
+          }
+        ],
+        "finalURL": "http://127.0.0.1:5601/?name=%D0%A2%D0%B5%D1%81%D1%82+%D0%90%D0%BD%D0%BD%D0%B0+%26+%3F+%23+%25+%2B+%C2%AB%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D0%B0%C2%BB&topic=%D0%9F%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D0%B5+%D0%B2+%D1%80%D0%B0%D0%B1%D0%BE%D1%87%D0%B5%D0%BC+%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D0%BA%D0%B5&time=%D0%A2%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D0%BE%D0%B5+%D0%B2%D1%80%D0%B5%D0%BC%D1%8F",
+        "syntheticData": true
+      },
+      "screenshot": "chromium-F-no-js-click-failure.png"
+    },
+    {
+      "engine": "chromium",
+      "id": "F-no-js-enter",
+      "title": "Форма без рабочего JavaScript: no-js, enter",
+      "status": "FAIL",
+      "error": "Имя, тема и время отправлены GET-запросом в URL сайта",
+      "evidence": {
+        "outgoing": [
+          {
+            "method": "GET",
+            "url": "http://127.0.0.1:5601/?name=%D0%A2%D0%B5%D1%81%D1%82+%D0%90%D0%BD%D0%BD%D0%B0+%26+%3F+%23+%25+%2B+%C2%AB%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D0%B0%C2%BB&topic=%D0%9F%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D0%B5+%D0%B2+%D1%80%D0%B0%D0%B1%D0%BE%D1%87%D0%B5%D0%BC+%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D0%BA%D0%B5&time=%D0%A2%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D0%BE%D0%B5+%D0%B2%D1%80%D0%B5%D0%BC%D1%8F"
+          }
+        ],
+        "finalURL": "http://127.0.0.1:5601/?name=%D0%A2%D0%B5%D1%81%D1%82+%D0%90%D0%BD%D0%BD%D0%B0+%26+%3F+%23+%25+%2B+%C2%AB%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D0%B0%C2%BB&topic=%D0%9F%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D0%B5+%D0%B2+%D1%80%D0%B0%D0%B1%D0%BE%D1%87%D0%B5%D0%BC+%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D0%BA%D0%B5&time=%D0%A2%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D0%BE%D0%B5+%D0%B2%D1%80%D0%B5%D0%BC%D1%8F",
+        "syntheticData": true
+      },
+      "screenshot": "chromium-F-no-js-enter-failure.png"
+    },
+    {
+      "engine": "chromium",
+      "id": "F-blocked-js-click",
+      "title": "Форма без рабочего JavaScript: blocked-js, click",
+      "status": "FAIL",
+      "error": "Имя, тема и время отправлены GET-запросом в URL сайта",
+      "evidence": {
+        "outgoing": [
+          {
+            "method": "GET",
+            "url": "http://127.0.0.1:5601/?name=%D0%A2%D0%B5%D1%81%D1%82+%D0%90%D0%BD%D0%BD%D0%B0+%26+%3F+%23+%25+%2B+%C2%AB%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D0%B0%C2%BB&topic=%D0%9F%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D0%B5+%D0%B2+%D1%80%D0%B0%D0%B1%D0%BE%D1%87%D0%B5%D0%BC+%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D0%BA%D0%B5&time=%D0%A2%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D0%BE%D0%B5+%D0%B2%D1%80%D0%B5%D0%BC%D1%8F"
+          }
+        ],
+        "finalURL": "http://127.0.0.1:5601/?name=%D0%A2%D0%B5%D1%81%D1%82+%D0%90%D0%BD%D0%BD%D0%B0+%26+%3F+%23+%25+%2B+%C2%AB%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D0%B0%C2%BB&topic=%D0%9F%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D0%B5+%D0%B2+%D1%80%D0%B0%D0%B1%D0%BE%D1%87%D0%B5%D0%BC+%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D0%BA%D0%B5&time=%D0%A2%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D0%BE%D0%B5+%D0%B2%D1%80%D0%B5%D0%BC%D1%8F",
+        "syntheticData": true
+      },
+      "screenshot": "chromium-F-blocked-js-click-failure.png"
+    },
+    {
+      "engine": "chromium",
+      "id": "F-blocked-js-enter",
+      "title": "Форма без рабочего JavaScript: blocked-js, enter",
+      "status": "FAIL",
+      "error": "Имя, тема и время отправлены GET-запросом в URL сайта",
+      "evidence": {
+        "outgoing": [
+          {
+            "method": "GET",
+            "url": "http://127.0.0.1:5601/?name=%D0%A2%D0%B5%D1%81%D1%82+%D0%90%D0%BD%D0%BD%D0%B0+%26+%3F+%23+%25+%2B+%C2%AB%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D0%B0%C2%BB&topic=%D0%9F%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D0%B5+%D0%B2+%D1%80%D0%B0%D0%B1%D0%BE%D1%87%D0%B5%D0%BC+%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D0%BA%D0%B5&time=%D0%A2%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D0%BE%D0%B5+%D0%B2%D1%80%D0%B5%D0%BC%D1%8F"
+          }
+        ],
+        "finalURL": "http://127.0.0.1:5601/?name=%D0%A2%D0%B5%D1%81%D1%82+%D0%90%D0%BD%D0%BD%D0%B0+%26+%3F+%23+%25+%2B+%C2%AB%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D0%B0%C2%BB&topic=%D0%9F%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D0%B5+%D0%B2+%D1%80%D0%B0%D0%B1%D0%BE%D1%87%D0%B5%D0%BC+%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D0%BA%D0%B5&time=%D0%A2%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D0%BE%D0%B5+%D0%B2%D1%80%D0%B5%D0%BC%D1%8F",
+        "syntheticData": true
+      },
+      "screenshot": "chromium-F-blocked-js-enter-failure.png"
+    },
+    {
+      "engine": "chromium",
+      "id": "F-init-error-click",
+      "title": "Форма без рабочего JavaScript: init-error, click",
+      "status": "FAIL",
+      "error": "Имя, тема и время отправлены GET-запросом в URL сайта",
+      "evidence": {
+        "outgoing": [
+          {
+            "method": "GET",
+            "url": "http://127.0.0.1:5601/?name=%D0%A2%D0%B5%D1%81%D1%82+%D0%90%D0%BD%D0%BD%D0%B0+%26+%3F+%23+%25+%2B+%C2%AB%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D0%B0%C2%BB&topic=%D0%9F%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D0%B5+%D0%B2+%D1%80%D0%B0%D0%B1%D0%BE%D1%87%D0%B5%D0%BC+%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D0%BA%D0%B5&time=%D0%A2%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D0%BE%D0%B5+%D0%B2%D1%80%D0%B5%D0%BC%D1%8F"
+          }
+        ],
+        "finalURL": "http://127.0.0.1:5601/?name=%D0%A2%D0%B5%D1%81%D1%82+%D0%90%D0%BD%D0%BD%D0%B0+%26+%3F+%23+%25+%2B+%C2%AB%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D0%B0%C2%BB&topic=%D0%9F%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D0%B5+%D0%B2+%D1%80%D0%B0%D0%B1%D0%BE%D1%87%D0%B5%D0%BC+%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D0%BA%D0%B5&time=%D0%A2%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D0%BE%D0%B5+%D0%B2%D1%80%D0%B5%D0%BC%D1%8F",
+        "syntheticData": true
+      },
+      "screenshot": "chromium-F-init-error-click-failure.png"
+    },
+    {
+      "engine": "chromium",
+      "id": "F-init-error-enter",
+      "title": "Форма без рабочего JavaScript: init-error, enter",
+      "status": "FAIL",
+      "error": "Имя, тема и время отправлены GET-запросом в URL сайта",
+      "evidence": {
+        "outgoing": [
+          {
+            "method": "GET",
+            "url": "http://127.0.0.1:5601/?name=%D0%A2%D0%B5%D1%81%D1%82+%D0%90%D0%BD%D0%BD%D0%B0+%26+%3F+%23+%25+%2B+%C2%AB%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D0%B0%C2%BB&topic=%D0%9F%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D0%B5+%D0%B2+%D1%80%D0%B0%D0%B1%D0%BE%D1%87%D0%B5%D0%BC+%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D0%BA%D0%B5&time=%D0%A2%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D0%BE%D0%B5+%D0%B2%D1%80%D0%B5%D0%BC%D1%8F"
+          }
+        ],
+        "finalURL": "http://127.0.0.1:5601/?name=%D0%A2%D0%B5%D1%81%D1%82+%D0%90%D0%BD%D0%BD%D0%B0+%26+%3F+%23+%25+%2B+%C2%AB%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D0%B0%C2%BB&topic=%D0%9F%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D0%B5+%D0%B2+%D1%80%D0%B0%D0%B1%D0%BE%D1%87%D0%B5%D0%BC+%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D0%BA%D0%B5&time=%D0%A2%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D0%BE%D0%B5+%D0%B2%D1%80%D0%B5%D0%BC%D1%8F",
+        "syntheticData": true
+      },
+      "screenshot": "chromium-F-init-error-enter-failure.png"
+    },
+    {
+      "engine": "chromium",
+      "id": "S01",
+      "title": "Ошибочные URL и запрет выхода из каталога сайта",
+      "evidence": [
+        {
+          "path": "missing-browser-test",
+          "status": 404
+        },
+        {
+          "path": "..%2fREADME.md",
+          "status": 403
+        },
+        {
+          "path": "assets/..%2f..%2fREADME.md",
+          "status": 403
+        },
+        {
+          "path": "%E0%A4%A",
+          "status": 404
+        },
+        {
+          "path": ".env",
+          "status": 404
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "engine": "firefox",
+      "id": "B01",
+      "title": "Загрузка страницы, скрипта, стилей и изображений",
+      "evidence": {
+        "images": [
+          {
+            "src": "assets/mark.svg",
+            "loaded": true,
+            "width": 48,
+            "height": 48
+          },
+          {
+            "src": "assets/hero.png",
+            "loaded": true,
+            "width": 1122,
+            "height": 1402
+          },
+          {
+            "src": "assets/mark.svg",
+            "loaded": true,
+            "width": 48,
+            "height": 48
+          }
+        ],
+        "resources": [
+          {
+            "url": "http://127.0.0.1:5601/styles.css",
+            "bytes": 19901,
+            "duration": 129
+          },
+          {
+            "url": "http://127.0.0.1:5601/assets/mark.svg",
+            "bytes": 671,
+            "duration": 133
+          },
+          {
+            "url": "http://127.0.0.1:5601/app.js",
+            "bytes": 3479,
+            "duration": 133
+          },
+          {
+            "url": "http://127.0.0.1:5601/assets/hero.png",
+            "bytes": 2661674,
+            "duration": 147
+          },
+          {
+            "url": "http://127.0.0.1:5601/assets/mark.svg",
+            "bytes": 0,
+            "duration": 191
+          }
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "firefox",
+      "id": "B02",
+      "title": "Все внутренние ссылки, пункты меню и кнопки записи",
+      "evidence": [
+        {
+          "text": "Перейти к содержанию",
+          "href": "#main"
+        },
+        {
+          "text": "в своём ритме\nконсультации по питанию",
+          "href": "#"
+        },
+        {
+          "text": "Для кого",
+          "href": "#for-you"
+        },
+        {
+          "text": "Подход",
+          "href": "#approach"
+        },
+        {
+          "text": "Консультация",
+          "href": "#consultation"
+        },
+        {
+          "text": "Вопросы",
+          "href": "#faq"
+        },
+        {
+          "text": "Записаться\n↗",
+          "href": "#booking"
+        },
+        {
+          "text": "Записаться на консультацию\n↗",
+          "href": "#booking"
+        },
+        {
+          "text": "Обсудить консультацию\n↗",
+          "href": "#booking"
+        },
+        {
+          "text": "в своём ритме\nконсультации по питанию",
+          "href": "#"
+        },
+        {
+          "text": "Записаться на консультацию ↗",
+          "href": "#booking"
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "engine": "firefox",
+      "id": "B03",
+      "title": "Каждый вопрос FAQ: открытие и закрытие мышью и клавиатурой",
+      "evidence": [
+        "С каким запросом можно прийти?\n+",
+        "Нужно ли готовиться или сдавать анализы?\n+",
+        "Это медицинская консультация?\n+",
+        "Сколько стоит консультация?\n+",
+        "Как перенести или отменить встречу?\n+"
+      ],
+      "status": "PASS"
+    },
+    {
+      "engine": "firefox",
+      "id": "B04",
+      "title": "Обязательные поля и имя из пробелов",
+      "status": "PASS"
+    },
+    {
+      "engine": "firefox",
+      "id": "B05",
+      "title": "Все темы, кириллица, спецсимволы и необязательное время",
+      "evidence": [
+        {
+          "topic": "Питание в рабочем графике",
+          "optionalTime": false,
+          "body": "Здравствуйте! Хочу записаться на консультацию по питанию.\n\nМеня зовут Тест Анна & ? # % + «проверка».\nМой запрос: Питание в рабочем графике.\nУдобное время для связи: Тест: 19:00 & 21:00 ? # %.\n\nПодскажите, пожалуйста, стоимость, условия и доступное время для онлайн-встречи.\n\nСпасибо!"
+        },
+        {
+          "topic": "Покупки и планирование еды",
+          "optionalTime": true,
+          "body": "Здравствуйте! Хочу записаться на консультацию по питанию.\n\nМеня зовут Тест Анна & ? # % + «проверка».\nМой запрос: Покупки и планирование еды.\n\nПодскажите, пожалуйста, стоимость, условия и доступное время для онлайн-встречи.\n\nСпасибо!"
+        },
+        {
+          "topic": "Повседневные привычки",
+          "optionalTime": false,
+          "body": "Здравствуйте! Хочу записаться на консультацию по питанию.\n\nМеня зовут Тест Анна & ? # % + «проверка».\nМой запрос: Повседневные привычки.\nУдобное время для связи: Тест: 19:00 & 21:00 ? # %.\n\nПодскажите, пожалуйста, стоимость, условия и доступное время для онлайн-встречи.\n\nСпасибо!"
+        },
+        {
+          "topic": "Хочу обсудить свой запрос",
+          "optionalTime": false,
+          "body": "Здравствуйте! Хочу записаться на консультацию по питанию.\n\nМеня зовут Тест Анна & ? # % + «проверка».\nМой запрос: Хочу обсудить свой запрос.\nУдобное время для связи: Тест: 19:00 & 21:00 ? # %.\n\nПодскажите, пожалуйста, стоимость, условия и доступное время для онлайн-встречи.\n\nСпасибо!"
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "engine": "firefox",
+      "id": "B06",
+      "title": "Редактирование письма и обе почтовые ссылки",
+      "evidence": {
+        "targets": [
+          "mailto:mariiapshenychna@gmail.com?subject=%D0%97%D0%B0%D1%8F%D0%B2%D0%BA%D0%B0%20%D0%BD%D0%B0%20%D0%BA%D0%BE%D0%BD%D1%81%D1%83%D0%BB%D1%8C%D1%82%D0%B0%D1%86%D0%B8%D1%8E%20%D0%BF%D0%BE%20%D0%BF%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D1%8E&body=%D0%A2%D0%B5%D1%81%D1%82%3A%20%D0%B8%D0%B7%D0%BC%D0%B5%D0%BD%D1%91%D0%BD%D0%BD%D0%BE%D0%B5%20%D0%BF%D0%B8%D1%81%D1%8C%D0%BC%D0%BE.%20%D0%9A%D0%B8%D1%80%D0%B8%D0%BB%D0%BB%D0%B8%D1%86%D0%B0%20%26%20%3F%20%23%20%25%20%2B%20%3D%20%2F%0A%D0%92%D1%82%D0%BE%D1%80%D0%B0%D1%8F%20%D1%81%D1%82%D1%80%D0%BE%D0%BA%D0%B0.",
+          "mailto:mariiapshenychna@gmail.com"
+        ],
+        "boundary": "Переход перехвачен перед запуском внешней почты; письма не отправлялись."
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "firefox",
+      "id": "B07",
+      "title": "Копирование письма и сброс статуса при повторном открытии",
+      "evidence": {
+        "status": "Текст скопирован. Вставьте его в письмо для mariiapshenychna@gmail.com и отправьте со своей почты.",
+        "readBackVerified": false
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "firefox",
+      "id": "B08",
+      "title": "Отказ API буфера: выделение текста для ручного копирования",
+      "evidence": {
+        "focused": true,
+        "start": 0,
+        "end": 284,
+        "length": 284,
+        "fault": "Отказ API смоделирован тестом; выполняется настоящий обработчик приложения."
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "firefox",
+      "id": "B09",
+      "title": "Оба диалога: крестик, Escape, фон, фокус и Tab",
+      "status": "PASS"
+    },
+    {
+      "engine": "firefox",
+      "id": "B10",
+      "title": "Форма целиком с клавиатуры и видимый фокус",
+      "evidence": {
+        "active": true,
+        "outline": "solid"
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "firefox",
+      "id": "B11",
+      "title": "Ограничения длины полей и текста письма",
+      "status": "PASS"
+    },
+    {
+      "engine": "firefox",
+      "id": "V320",
+      "title": "Страница и оба окна при 320 × 780",
+      "evidence": {
+        "width": 320,
+        "scrollWidth": 320,
+        "menuVisible": false,
+        "dialogs": [
+          {
+            "selector": "#email-dialog",
+            "bounds": {
+              "left": 16,
+              "right": 304,
+              "top": 50.16667175292969,
+              "bottom": 729.8332977294922,
+              "clientWidth": 286,
+              "scrollWidth": 286
+            }
+          },
+          {
+            "selector": "#privacy-dialog",
+            "bounds": {
+              "left": 16,
+              "right": 304,
+              "top": 67.86666870117188,
+              "bottom": 712.1333312988281,
+              "clientWidth": 286,
+              "scrollWidth": 286
+            }
+          }
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "firefox",
+      "id": "V375",
+      "title": "Страница и оба окна при 375 × 812",
+      "evidence": {
+        "width": 375,
+        "scrollWidth": 375,
+        "menuVisible": false,
+        "dialogs": [
+          {
+            "selector": "#email-dialog",
+            "bounds": {
+              "left": 16,
+              "right": 359,
+              "top": 76.96665954589844,
+              "bottom": 735.0333099365234,
+              "clientWidth": 341,
+              "scrollWidth": 341
+            }
+          },
+          {
+            "selector": "#privacy-dialog",
+            "bounds": {
+              "left": 16,
+              "right": 359,
+              "top": 105.46665954589844,
+              "bottom": 706.5333099365234,
+              "clientWidth": 341,
+              "scrollWidth": 341
+            }
+          }
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "firefox",
+      "id": "V768",
+      "title": "Страница и оба окна при 768 × 1024",
+      "evidence": {
+        "width": 768,
+        "scrollWidth": 768,
+        "menuVisible": false,
+        "dialogs": [
+          {
+            "selector": "#email-dialog",
+            "bounds": {
+              "left": 94,
+              "right": 674,
+              "top": 211.23333740234375,
+              "bottom": 812.7666625976562,
+              "clientWidth": 578,
+              "scrollWidth": 578
+            }
+          },
+          {
+            "selector": "#privacy-dialog",
+            "bounds": {
+              "left": 94,
+              "right": 674,
+              "top": 288.33331298828125,
+              "bottom": 735.6666564941406,
+              "clientWidth": 578,
+              "scrollWidth": 578
+            }
+          }
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "firefox",
+      "id": "V1440",
+      "title": "Страница и оба окна при 1440 × 900",
+      "evidence": {
+        "width": 1440,
+        "scrollWidth": 1440,
+        "menuVisible": true,
+        "dialogs": [
+          {
+            "selector": "#email-dialog",
+            "bounds": {
+              "left": 430,
+              "right": 1010,
+              "top": 149.23333740234375,
+              "bottom": 750.7666625976562,
+              "clientWidth": 578,
+              "scrollWidth": 578
+            }
+          },
+          {
+            "selector": "#privacy-dialog",
+            "bounds": {
+              "left": 430,
+              "right": 1010,
+              "top": 226.3333282470703,
+              "bottom": 673.6666717529297,
+              "clientWidth": 578,
+              "scrollWidth": 578
+            }
+          }
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "firefox",
+      "id": "V812",
+      "title": "Страница и оба окна при 812 × 375",
+      "evidence": {
+        "width": 812,
+        "scrollWidth": 812,
+        "menuVisible": true,
+        "dialogs": [
+          {
+            "selector": "#email-dialog",
+            "bounds": {
+              "left": 116,
+              "right": 696,
+              "top": 18.75,
+              "bottom": 356.25,
+              "clientWidth": 578,
+              "scrollWidth": 578
+            }
+          },
+          {
+            "selector": "#privacy-dialog",
+            "bounds": {
+              "left": 116,
+              "right": 696,
+              "top": 18.75,
+              "bottom": 356.25,
+              "clientWidth": 578,
+              "scrollWidth": 578
+            }
+          }
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "firefox",
+      "id": "V200",
+      "title": "Эмуляция рабочей области 720 × 450 для масштаба 200%",
+      "evidence": {
+        "width": 720,
+        "scrollWidth": 720,
+        "method": "Рабочая область в CSS-пикселях уменьшена вдвое от 1440 × 900. Настоящий Ctrl+Plus и системный масштаб не проверены."
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "firefox",
+      "id": "A01",
+      "title": "Автоматическая проверка доступности страницы и диалогов",
+      "status": "FAIL",
+      "error": "Обнаружены нарушения доступности; см. отдельный JSON",
+      "evidence": [
+        {
+          "state": "page",
+          "violations": [
+            {
+              "id": "color-contrast",
+              "impact": "serious",
+              "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+              "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axeAPI",
+              "nodes": [
+                {
+                  "target": [
+                    ".photo-caption > p > span"
+                  ],
+                  "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.23 (foreground color: #66705f, background color: #eee8d6, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1"
+                },
+                {
+                  "target": [
+                    "article:nth-child(1) > .number"
+                  ],
+                  "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.78 (foreground color: #737b68, background color: #efeee5, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1"
+                },
+                {
+                  "target": [
+                    "article:nth-child(1) > p"
+                  ],
+                  "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.45 (foreground color: #66705f, background color: #efeee5, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+                },
+                {
+                  "target": [
+                    "article:nth-child(2) > .number"
+                  ],
+                  "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.54 (foreground color: #737b68, background color: #eee5dc, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1"
+                },
+                {
+                  "target": [
+                    "article:nth-child(2) > p"
+                  ],
+                  "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.16 (foreground color: #66705f, background color: #eee5dc, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+                },
+                {
+                  "target": [
+                    "article:nth-child(3) > .number"
+                  ],
+                  "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.68 (foreground color: #737b68, background color: #e8ece3, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1"
+                },
+                {
+                  "target": [
+                    "article:nth-child(3) > p"
+                  ],
+                  "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.33 (foreground color: #66705f, background color: #e8ece3, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+                },
+                {
+                  "target": [
+                    ".paper-footer"
+                  ],
+                  "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.45 (foreground color: #6b795b, background color: #fcfaf4, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+                },
+                {
+                  "target": [
+                    ".art-note"
+                  ],
+                  "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.71 (foreground color: #6d7760, background color: #e2e6d8, font size: 6.8pt (9px), font weight: normal). Expected contrast ratio of 4.5:1"
+                },
+                {
+                  "target": [
+                    ".approach-point:nth-child(4) > span"
+                  ],
+                  "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.45 (foreground color: #788568, background color: #f1f1e9, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1"
+                },
+                {
+                  "target": [
+                    ".approach-point:nth-child(5) > span"
+                  ],
+                  "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.45 (foreground color: #788568, background color: #f1f1e9, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1"
+                },
+                {
+                  "target": [
+                    ".approach-point:nth-child(6) > span"
+                  ],
+                  "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.45 (foreground color: #788568, background color: #f1f1e9, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1"
+                },
+                {
+                  "target": [
+                    "ul > li:nth-child(1) > span"
+                  ],
+                  "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.22 (foreground color: #78856c, background color: #e6ebdf, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1"
+                },
+                {
+                  "target": [
+                    "li:nth-child(1) > div > p"
+                  ],
+                  "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.46 (foreground color: #616e58, background color: #e6ebdf, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+                },
+                {
+                  "target": [
+                    "ul > li:nth-child(2) > span"
+                  ],
+                  "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.22 (foreground color: #78856c, background color: #e6ebdf, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1"
+                },
+                {
+                  "target": [
+                    "li:nth-child(2) > div > p"
+                  ],
+                  "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.46 (foreground color: #616e58, background color: #e6ebdf, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+                },
+                {
+                  "target": [
+                    "ul > li:nth-child(3) > span"
+                  ],
+                  "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.22 (foreground color: #78856c, background color: #e6ebdf, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1"
+                },
+                {
+                  "target": [
+                    "li:nth-child(3) > div > p"
+                  ],
+                  "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.46 (foreground color: #616e58, background color: #e6ebdf, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+                },
+                {
+                  "target": [
+                    ".booking-copy > p:nth-child(3)"
+                  ],
+                  "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.23 (foreground color: #6b6d5e, background color: #f1e4d8, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+                },
+                {
+                  "target": [
+                    ".direct-note"
+                  ],
+                  "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.88 (foreground color: #717363, background color: #f1e4d8, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1"
+                },
+                {
+                  "target": [
+                    ".form-privacy"
+                  ],
+                  "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.28 (foreground color: #747866, background color: #fbf8f1, font size: 6.8pt (9px), font weight: normal). Expected contrast ratio of 4.5:1"
+                },
+                {
+                  "target": [
+                    ".form-note"
+                  ],
+                  "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.37 (foreground color: #717765, background color: #fbf8f1, font size: 6.8pt (9px), font weight: normal). Expected contrast ratio of 4.5:1"
+                },
+                {
+                  "target": [
+                    ".footer-bottom > span:nth-child(1)"
+                  ],
+                  "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.07 (foreground color: #737b68, background color: #f7f6f0, font size: 6.8pt (9px), font weight: normal). Expected contrast ratio of 4.5:1"
+                },
+                {
+                  "target": [
+                    "#privacy-button"
+                  ],
+                  "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.07 (foreground color: #737b68, background color: #f7f6f0, font size: 6.8pt (9px), font weight: normal). Expected contrast ratio of 4.5:1"
+                },
+                {
+                  "target": [
+                    ".footer-bottom > span:nth-child(3)"
+                  ],
+                  "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.07 (foreground color: #737b68, background color: #f7f6f0, font size: 6.8pt (9px), font weight: normal). Expected contrast ratio of 4.5:1"
+                }
+              ]
+            }
+          ],
+          "incomplete": [
+            {
+              "id": "aria-prohibited-attr",
+              "nodes": 1
+            },
+            {
+              "id": "color-contrast",
+              "nodes": 8
+            }
+          ],
+          "passes": 26
+        },
+        {
+          "state": "email",
+          "violations": [],
+          "incomplete": [],
+          "passes": 19
+        },
+        {
+          "state": "privacy",
+          "violations": [],
+          "incomplete": [
+            {
+              "id": "color-contrast",
+              "nodes": 3
+            }
+          ],
+          "passes": 13
+        }
+      ],
+      "screenshot": "firefox-A01-failure.png"
+    },
+    {
+      "engine": "firefox",
+      "id": "B12",
+      "title": "Ошибки браузера и отсутствие сохранённых полей",
+      "evidence": {
+        "storage": {
+          "local": 0,
+          "session": 0,
+          "cookie": ""
+        },
+        "consoleErrors": [],
+        "pageErrors": [],
+        "failedRequests": []
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "firefox",
+      "id": "F-no-js-click",
+      "title": "Форма без рабочего JavaScript: no-js, click",
+      "status": "FAIL",
+      "error": "Имя, тема и время отправлены GET-запросом в URL сайта",
+      "evidence": {
+        "outgoing": [
+          {
+            "method": "GET",
+            "url": "http://127.0.0.1:5601/?name=%D0%A2%D0%B5%D1%81%D1%82+%D0%90%D0%BD%D0%BD%D0%B0+%26+%3F+%23+%25+%2B+%C2%AB%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D0%B0%C2%BB&topic=%D0%9F%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D0%B5+%D0%B2+%D1%80%D0%B0%D0%B1%D0%BE%D1%87%D0%B5%D0%BC+%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D0%BA%D0%B5&time=%D0%A2%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D0%BE%D0%B5+%D0%B2%D1%80%D0%B5%D0%BC%D1%8F"
+          }
+        ],
+        "finalURL": "http://127.0.0.1:5601/?name=%D0%A2%D0%B5%D1%81%D1%82+%D0%90%D0%BD%D0%BD%D0%B0+%26+%3F+%23+%25+%2B+%C2%AB%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D0%B0%C2%BB&topic=%D0%9F%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D0%B5+%D0%B2+%D1%80%D0%B0%D0%B1%D0%BE%D1%87%D0%B5%D0%BC+%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D0%BA%D0%B5&time=%D0%A2%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D0%BE%D0%B5+%D0%B2%D1%80%D0%B5%D0%BC%D1%8F",
+        "syntheticData": true
+      },
+      "screenshot": "firefox-F-no-js-click-failure.png"
+    },
+    {
+      "engine": "firefox",
+      "id": "F-no-js-enter",
+      "title": "Форма без рабочего JavaScript: no-js, enter",
+      "status": "FAIL",
+      "error": "Имя, тема и время отправлены GET-запросом в URL сайта",
+      "evidence": {
+        "outgoing": [
+          {
+            "method": "GET",
+            "url": "http://127.0.0.1:5601/?name=%D0%A2%D0%B5%D1%81%D1%82+%D0%90%D0%BD%D0%BD%D0%B0+%26+%3F+%23+%25+%2B+%C2%AB%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D0%B0%C2%BB&topic=%D0%9F%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D0%B5+%D0%B2+%D1%80%D0%B0%D0%B1%D0%BE%D1%87%D0%B5%D0%BC+%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D0%BA%D0%B5&time=%D0%A2%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D0%BE%D0%B5+%D0%B2%D1%80%D0%B5%D0%BC%D1%8F"
+          }
+        ],
+        "finalURL": "http://127.0.0.1:5601/?name=%D0%A2%D0%B5%D1%81%D1%82+%D0%90%D0%BD%D0%BD%D0%B0+%26+%3F+%23+%25+%2B+%C2%AB%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D0%B0%C2%BB&topic=%D0%9F%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D0%B5+%D0%B2+%D1%80%D0%B0%D0%B1%D0%BE%D1%87%D0%B5%D0%BC+%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D0%BA%D0%B5&time=%D0%A2%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D0%BE%D0%B5+%D0%B2%D1%80%D0%B5%D0%BC%D1%8F",
+        "syntheticData": true
+      },
+      "screenshot": "firefox-F-no-js-enter-failure.png"
+    },
+    {
+      "engine": "firefox",
+      "id": "F-blocked-js-click",
+      "title": "Форма без рабочего JavaScript: blocked-js, click",
+      "status": "FAIL",
+      "error": "Имя, тема и время отправлены GET-запросом в URL сайта",
+      "evidence": {
+        "outgoing": [
+          {
+            "method": "GET",
+            "url": "http://127.0.0.1:5601/?name=%D0%A2%D0%B5%D1%81%D1%82+%D0%90%D0%BD%D0%BD%D0%B0+%26+%3F+%23+%25+%2B+%C2%AB%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D0%B0%C2%BB&topic=%D0%9F%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D0%B5+%D0%B2+%D1%80%D0%B0%D0%B1%D0%BE%D1%87%D0%B5%D0%BC+%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D0%BA%D0%B5&time=%D0%A2%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D0%BE%D0%B5+%D0%B2%D1%80%D0%B5%D0%BC%D1%8F"
+          }
+        ],
+        "finalURL": "http://127.0.0.1:5601/?name=%D0%A2%D0%B5%D1%81%D1%82+%D0%90%D0%BD%D0%BD%D0%B0+%26+%3F+%23+%25+%2B+%C2%AB%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D0%B0%C2%BB&topic=%D0%9F%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D0%B5+%D0%B2+%D1%80%D0%B0%D0%B1%D0%BE%D1%87%D0%B5%D0%BC+%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D0%BA%D0%B5&time=%D0%A2%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D0%BE%D0%B5+%D0%B2%D1%80%D0%B5%D0%BC%D1%8F",
+        "syntheticData": true
+      },
+      "screenshot": "firefox-F-blocked-js-click-failure.png"
+    },
+    {
+      "engine": "firefox",
+      "id": "F-blocked-js-enter",
+      "title": "Форма без рабочего JavaScript: blocked-js, enter",
+      "status": "FAIL",
+      "error": "Имя, тема и время отправлены GET-запросом в URL сайта",
+      "evidence": {
+        "outgoing": [
+          {
+            "method": "GET",
+            "url": "http://127.0.0.1:5601/?name=%D0%A2%D0%B5%D1%81%D1%82+%D0%90%D0%BD%D0%BD%D0%B0+%26+%3F+%23+%25+%2B+%C2%AB%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D0%B0%C2%BB&topic=%D0%9F%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D0%B5+%D0%B2+%D1%80%D0%B0%D0%B1%D0%BE%D1%87%D0%B5%D0%BC+%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D0%BA%D0%B5&time=%D0%A2%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D0%BE%D0%B5+%D0%B2%D1%80%D0%B5%D0%BC%D1%8F"
+          }
+        ],
+        "finalURL": "http://127.0.0.1:5601/?name=%D0%A2%D0%B5%D1%81%D1%82+%D0%90%D0%BD%D0%BD%D0%B0+%26+%3F+%23+%25+%2B+%C2%AB%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D0%B0%C2%BB&topic=%D0%9F%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D0%B5+%D0%B2+%D1%80%D0%B0%D0%B1%D0%BE%D1%87%D0%B5%D0%BC+%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D0%BA%D0%B5&time=%D0%A2%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D0%BE%D0%B5+%D0%B2%D1%80%D0%B5%D0%BC%D1%8F",
+        "syntheticData": true
+      },
+      "screenshot": "firefox-F-blocked-js-enter-failure.png"
+    },
+    {
+      "engine": "firefox",
+      "id": "F-init-error-click",
+      "title": "Форма без рабочего JavaScript: init-error, click",
+      "status": "FAIL",
+      "error": "Имя, тема и время отправлены GET-запросом в URL сайта",
+      "evidence": {
+        "outgoing": [
+          {
+            "method": "GET",
+            "url": "http://127.0.0.1:5601/?name=%D0%A2%D0%B5%D1%81%D1%82+%D0%90%D0%BD%D0%BD%D0%B0+%26+%3F+%23+%25+%2B+%C2%AB%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D0%B0%C2%BB&topic=%D0%9F%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D0%B5+%D0%B2+%D1%80%D0%B0%D0%B1%D0%BE%D1%87%D0%B5%D0%BC+%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D0%BA%D0%B5&time=%D0%A2%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D0%BE%D0%B5+%D0%B2%D1%80%D0%B5%D0%BC%D1%8F"
+          }
+        ],
+        "finalURL": "http://127.0.0.1:5601/?name=%D0%A2%D0%B5%D1%81%D1%82+%D0%90%D0%BD%D0%BD%D0%B0+%26+%3F+%23+%25+%2B+%C2%AB%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D0%B0%C2%BB&topic=%D0%9F%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D0%B5+%D0%B2+%D1%80%D0%B0%D0%B1%D0%BE%D1%87%D0%B5%D0%BC+%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D0%BA%D0%B5&time=%D0%A2%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D0%BE%D0%B5+%D0%B2%D1%80%D0%B5%D0%BC%D1%8F",
+        "syntheticData": true
+      },
+      "screenshot": "firefox-F-init-error-click-failure.png"
+    },
+    {
+      "engine": "firefox",
+      "id": "F-init-error-enter",
+      "title": "Форма без рабочего JavaScript: init-error, enter",
+      "status": "FAIL",
+      "error": "Имя, тема и время отправлены GET-запросом в URL сайта",
+      "evidence": {
+        "outgoing": [
+          {
+            "method": "GET",
+            "url": "http://127.0.0.1:5601/?name=%D0%A2%D0%B5%D1%81%D1%82+%D0%90%D0%BD%D0%BD%D0%B0+%26+%3F+%23+%25+%2B+%C2%AB%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D0%B0%C2%BB&topic=%D0%9F%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D0%B5+%D0%B2+%D1%80%D0%B0%D0%B1%D0%BE%D1%87%D0%B5%D0%BC+%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D0%BA%D0%B5&time=%D0%A2%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D0%BE%D0%B5+%D0%B2%D1%80%D0%B5%D0%BC%D1%8F"
+          }
+        ],
+        "finalURL": "http://127.0.0.1:5601/?name=%D0%A2%D0%B5%D1%81%D1%82+%D0%90%D0%BD%D0%BD%D0%B0+%26+%3F+%23+%25+%2B+%C2%AB%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D0%B0%C2%BB&topic=%D0%9F%D0%B8%D1%82%D0%B0%D0%BD%D0%B8%D0%B5+%D0%B2+%D1%80%D0%B0%D0%B1%D0%BE%D1%87%D0%B5%D0%BC+%D0%B3%D1%80%D0%B0%D1%84%D0%B8%D0%BA%D0%B5&time=%D0%A2%D0%B5%D1%81%D1%82%D0%BE%D0%B2%D0%BE%D0%B5+%D0%B2%D1%80%D0%B5%D0%BC%D1%8F",
+        "syntheticData": true
+      },
+      "screenshot": "firefox-F-init-error-enter-failure.png"
+    },
+    {
+      "engine": "firefox",
+      "id": "S01",
+      "title": "Ошибочные URL и запрет выхода из каталога сайта",
+      "evidence": [
+        {
+          "path": "missing-browser-test",
+          "status": 404
+        },
+        {
+          "path": "..%2fREADME.md",
+          "status": 403
+        },
+        {
+          "path": "assets/..%2f..%2fREADME.md",
+          "status": 403
+        },
+        {
+          "path": "%E0%A4%A",
+          "status": 404
+        },
+        {
+          "path": ".env",
+          "status": 404
+        }
+      ],
+      "status": "PASS"
+    }
+  ],
+  "summary": {
+    "PASS": 38,
+    "FAIL": 14,
+    "BLOCKED": 0
+  }
+}
