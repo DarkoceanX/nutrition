@@ -1,0 +1,37 @@
+[
+  {
+    "port": null,
+    "status": "PASS",
+    "message": "Для запуска нужен назначенный порт VIBEFORGE_SESSION_PORT или PORT (1–65535)."
+  },
+  {
+    "port": "",
+    "status": "PASS",
+    "message": "Для запуска нужен назначенный порт VIBEFORGE_SESSION_PORT или PORT (1–65535)."
+  },
+  {
+    "port": "0",
+    "status": "PASS",
+    "message": "Для запуска нужен назначенный порт VIBEFORGE_SESSION_PORT или PORT (1–65535)."
+  },
+  {
+    "port": "-1",
+    "status": "PASS",
+    "message": "Для запуска нужен назначенный порт VIBEFORGE_SESSION_PORT или PORT (1–65535)."
+  },
+  {
+    "port": "65536",
+    "status": "PASS",
+    "message": "Для запуска нужен назначенный порт VIBEFORGE_SESSION_PORT или PORT (1–65535)."
+  },
+  {
+    "port": "12.5",
+    "status": "PASS",
+    "message": "Для запуска нужен назначенный порт VIBEFORGE_SESSION_PORT или PORT (1–65535)."
+  },
+  {
+    "port": "abc",
+    "status": "PASS",
+    "message": "Для запуска нужен назначенный порт VIBEFORGE_SESSION_PORT или PORT (1–65535)."
+  }
+]

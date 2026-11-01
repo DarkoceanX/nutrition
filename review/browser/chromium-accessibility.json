@@ -1,0 +1,193 @@
+[
+  {
+    "state": "page",
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.14/color-contrast?application=axeAPI",
+        "nodes": [
+          {
+            "target": [
+              ".photo-caption > p > span"
+            ],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.23 (foreground color: #66705f, background color: #eee8d6, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "article:nth-child(1) > .number"
+            ],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.78 (foreground color: #737b68, background color: #efeee5, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "article:nth-child(1) > p"
+            ],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.45 (foreground color: #66705f, background color: #efeee5, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "article:nth-child(2) > .number"
+            ],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.54 (foreground color: #737b68, background color: #eee5dc, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "article:nth-child(2) > p"
+            ],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.16 (foreground color: #66705f, background color: #eee5dc, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "article:nth-child(3) > .number"
+            ],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.68 (foreground color: #737b68, background color: #e8ece3, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "article:nth-child(3) > p"
+            ],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.33 (foreground color: #66705f, background color: #e8ece3, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              ".paper-footer"
+            ],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.45 (foreground color: #6b795b, background color: #fcfaf4, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              ".art-note"
+            ],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.71 (foreground color: #6d7760, background color: #e2e6d8, font size: 6.8pt (9px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              ".approach-point:nth-child(4) > span"
+            ],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.45 (foreground color: #788568, background color: #f1f1e9, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              ".approach-point:nth-child(5) > span"
+            ],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.45 (foreground color: #788568, background color: #f1f1e9, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              ".approach-point:nth-child(6) > span"
+            ],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.45 (foreground color: #788568, background color: #f1f1e9, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "ul > li:nth-child(1) > span"
+            ],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.22 (foreground color: #78856c, background color: #e6ebdf, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "li:nth-child(1) > div > p"
+            ],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.46 (foreground color: #616e58, background color: #e6ebdf, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "ul > li:nth-child(2) > span"
+            ],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.22 (foreground color: #78856c, background color: #e6ebdf, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "li:nth-child(2) > div > p"
+            ],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.46 (foreground color: #616e58, background color: #e6ebdf, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "ul > li:nth-child(3) > span"
+            ],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.22 (foreground color: #78856c, background color: #e6ebdf, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "li:nth-child(3) > div > p"
+            ],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.46 (foreground color: #616e58, background color: #e6ebdf, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              ".booking-copy > p:nth-child(3)"
+            ],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.23 (foreground color: #6b6d5e, background color: #f1e4d8, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              ".direct-note"
+            ],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.88 (foreground color: #717363, background color: #f1e4d8, font size: 7.5pt (10px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              ".form-privacy"
+            ],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.28 (foreground color: #747866, background color: #fbf8f1, font size: 6.8pt (9px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              ".form-note"
+            ],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.37 (foreground color: #717765, background color: #fbf8f1, font size: 6.8pt (9px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              ".footer-bottom > span:nth-child(1)"
+            ],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.07 (foreground color: #737b68, background color: #f7f6f0, font size: 6.8pt (9px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "#privacy-button"
+            ],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.07 (foreground color: #737b68, background color: #f7f6f0, font size: 6.8pt (9px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              ".footer-bottom > span:nth-child(3)"
+            ],
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.07 (foreground color: #737b68, background color: #f7f6f0, font size: 6.8pt (9px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ],
+    "incomplete": [
+      {
+        "id": "aria-prohibited-attr",
+        "nodes": 1
+      },
+      {
+        "id": "color-contrast",
+        "nodes": 8
+      }
+    ],
+    "passes": 26
+  },
+  {
+    "state": "email",
+    "violations": [],
+    "incomplete": [],
+    "passes": 19
+  },
+  {
+    "state": "privacy",
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "nodes": 3
+      }
+    ],
+    "passes": 13
+  }
+]

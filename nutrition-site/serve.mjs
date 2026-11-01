@@ -1,7 +1,15 @@
 import http from 'node:http';
 import { readFile } from 'node:fs/promises';
 import { resolve, extname, sep } from 'node:path';
-const root = resolve('dist');
+import { fileURLToPath } from 'node:url';
+const root = fileURLToPath(new URL('./dist/', import.meta.url)).replace(/\/$/, '');
+const portValue = process.env.VIBEFORGE_SESSION_PORT ?? process.env.PORT;
+if (!portValue || !/^\d+$/.test(portValue) || Number(portValue) < 1 || Number(portValue) > 65535) {
+  console.error('Для запуска нужен назначенный порт VIBEFORGE_SESSION_PORT или PORT (1–65535).');
+  process.exit(1);
+}
+const port = Number(portValue);
+const host = process.env.HOST ?? '0.0.0.0';
 const types = {'.html':'text/html; charset=utf-8','.css':'text/css; charset=utf-8','.js':'text/javascript; charset=utf-8','.svg':'image/svg+xml','.png':'image/png','.jpg':'image/jpeg'};
 const server = http.createServer(async (req,res) => {
   try {
@@ -12,4 +20,8 @@ const server = http.createServer(async (req,res) => {
     res.writeHead(200,{'Content-Type':types[extname(file)] || 'application/octet-stream','Cache-Control':'no-store'});res.end(bytes);
   } catch {res.writeHead(404);res.end('Not found');}
 });
-server.listen(4173,'127.0.0.1',()=>console.log('Local: http://127.0.0.1:4173'));
+server.on('error', error => {
+  console.error(`Не удалось запустить сайт: ${error.message}`);
+  process.exitCode = 1;
+});
+server.listen(port,host,()=>console.log(`Сайт запущен на http://${host}:${port}`));

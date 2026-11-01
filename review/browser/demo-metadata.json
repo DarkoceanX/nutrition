@@ -1,0 +1,18 @@
+[
+  {
+    "file": "desktop-demo.webm",
+    "duration": 23,
+    "width": 1280,
+    "height": 800,
+    "readyState": 4,
+    "error": null
+  },
+  {
+    "file": "mobile-demo.webm",
+    "duration": 11.08,
+    "width": 374,
+    "height": 812,
+    "readyState": 4,
+    "error": null
+  }
+]
