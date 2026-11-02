@@ -1,0 +1,175 @@
+{
+  "date": "2026-11-02T18:15:09.387Z",
+  "archive": "review/site-preview.zip",
+  "archiveSha256": "15f5d207e4f3dc188e5d1d5bf8f17ff86d0f4b2e74a13f65a39855f12902181d",
+  "cases": [
+    {
+      "engine": "chromium",
+      "id": "OFF-index.html",
+      "title": "Переход без сети и совпадение с сайтом: index.html",
+      "evidence": {
+        "matchingSource": true,
+        "embeddedResources": true
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "id": "OFF-about.html",
+      "title": "Переход без сети и совпадение с сайтом: about.html",
+      "evidence": {
+        "matchingSource": true,
+        "embeddedResources": true
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "id": "OFF-consultation.html",
+      "title": "Переход без сети и совпадение с сайтом: consultation.html",
+      "evidence": {
+        "matchingSource": true,
+        "embeddedResources": true
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "id": "OFF-materials.html",
+      "title": "Переход без сети и совпадение с сайтом: materials.html",
+      "evidence": {
+        "matchingSource": true,
+        "embeddedResources": true
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "id": "OFF-contacts.html",
+      "title": "Переход без сети и совпадение с сайтом: contacts.html",
+      "evidence": {
+        "matchingSource": true,
+        "embeddedResources": true
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "id": "OFF-club.html",
+      "title": "Переход без сети и совпадение с сайтом: club.html",
+      "evidence": {
+        "matchingSource": true,
+        "embeddedResources": true
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "id": "OFF-FORM",
+      "title": "Мобильное меню и подготовка письма из локального файла",
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "id": "OFF-NETWORK",
+      "title": "Нет HTTP-запросов и ошибок JavaScript",
+      "evidence": {
+        "errors": [],
+        "httpRequests": [],
+        "offline": true
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "firefox",
+      "id": "OFF-index.html",
+      "title": "Переход без сети и совпадение с сайтом: index.html",
+      "evidence": {
+        "matchingSource": true,
+        "embeddedResources": true
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "firefox",
+      "id": "OFF-about.html",
+      "title": "Переход без сети и совпадение с сайтом: about.html",
+      "evidence": {
+        "matchingSource": true,
+        "embeddedResources": true
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "firefox",
+      "id": "OFF-consultation.html",
+      "title": "Переход без сети и совпадение с сайтом: consultation.html",
+      "evidence": {
+        "matchingSource": true,
+        "embeddedResources": true
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "firefox",
+      "id": "OFF-materials.html",
+      "title": "Переход без сети и совпадение с сайтом: materials.html",
+      "evidence": {
+        "matchingSource": true,
+        "embeddedResources": true
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "firefox",
+      "id": "OFF-contacts.html",
+      "title": "Переход без сети и совпадение с сайтом: contacts.html",
+      "evidence": {
+        "matchingSource": true,
+        "embeddedResources": true
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "firefox",
+      "id": "OFF-club.html",
+      "title": "Переход без сети и совпадение с сайтом: club.html",
+      "evidence": {
+        "matchingSource": true,
+        "embeddedResources": true
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "firefox",
+      "id": "OFF-FORM",
+      "title": "Мобильное меню и подготовка письма из локального файла",
+      "status": "PASS"
+    },
+    {
+      "engine": "firefox",
+      "id": "OFF-NETWORK",
+      "title": "Нет HTTP-запросов и ошибок JavaScript",
+      "evidence": {
+        "errors": [],
+        "httpRequests": [],
+        "offline": true
+      },
+      "status": "PASS"
+    }
+  ],
+  "engines": [
+    {
+      "engine": "chromium",
+      "version": "156.0.8078.4"
+    },
+    {
+      "engine": "firefox",
+      "version": "157.0"
+    }
+  ],
+  "summary": {
+    "passed": 16,
+    "failed": 0
+  }
+}

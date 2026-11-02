@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#f7f6f0">
   <meta name="description" content="Консультация по повседневному питанию: разберём ваш график и привычки, наметим понятные шаги. Оставьте заявку по email.">
   <meta name="robots" content="noindex, nofollow">
-  <title>В своём ритме — консультация по питанию</title>
+  <title>Консультация по питанию — В своём ритме</title>
   <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
   <script src="app.js" defer></script>
@@ -15,61 +15,46 @@
   <a class="skip-link" href="#main">Перейти к содержанию</a>
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="#" aria-label="В своём ритме — на главную"><img src="assets/mark.svg" width="38" height="42" alt=""><span>в своём ритме<small>консультации по питанию</small></span></a>
-      <nav class="desktop-nav" aria-label="Основная навигация"><a href="#for-you">Для кого</a><a href="#approach">Подход</a><a href="#consultation">Консультация</a><a href="#faq">Вопросы</a></nav>
-      <a class="button button-small button-outline header-cta" href="#booking">Записаться <span aria-hidden="true">↗</span></a>
+      <a class="brand" href="index.html" aria-label="В своём ритме — главная"><img src="assets/mark.svg" width="32" height="36" alt=""><span>в своём ритме<small>консультации по питанию</small></span></a>
+      <button id="menu-toggle" class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden><span>Меню</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+      <nav id="site-nav" class="site-nav" aria-label="Основная навигация">
+        <a href="index.html" aria-current="page">Главная</a>
+<a href="about.html">Обо мне</a>
+<a href="consultation.html">Консультация</a>
+<a href="materials.html">Материалы</a>
+<a href="contacts.html">Контакты и документы</a>
+<a href="club.html">Клуб</a>
+      </nav>
+      <a class="button button-primary header-cta" href="consultation.html#booking">Оставить заявку</a>
     </div>
   </header>
-  <main id="main">
+  <main id="main" tabindex="-1">
+
     <section class="hero container" aria-labelledby="hero-title">
       <div class="hero-copy">
-        <p class="eyebrow"><span class="small-dot"></span> индивидуальная онлайн-консультация</p>
-        <h1 id="hero-title">Питание, которое<br>вписывается<br>в <em>вашу жизнь.</em></h1>
+        <p class="eyebrow">индивидуальная онлайн-консультация</p>
+        <h1 id="hero-title">Питание, которое вписывается в <em>вашу жизнь.</em></h1>
         <p class="hero-description">Разберём ваши привычки и расписание, чтобы сделать повседневное питание понятнее и удобнее. Спокойно, с вниманием к вам.</p>
-        <a class="button button-primary hero-button" href="#booking">Записаться на консультацию <span aria-hidden="true">↗</span></a>
-        <p class="hero-note">Начнём с вашей задачи. В вашем темпе.</p>
-        <div class="hero-details"><span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7v5l3 2"/></svg>45–60 минут</span><span><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="13" rx="3"/><path d="M8 21h8m-4-4v4"/></svg>Онлайн</span><span>С понятным планом действий</span></div>
+        <div class="hero-actions"><a class="button button-primary" href="consultation.html">О консультации</a><a class="text-link" href="about.html">Обо мне</a></div>
+        <div class="hero-details"><span>45–60 минут</span><span>Онлайн</span><span>Один на один</span></div>
       </div>
-      <div class="hero-visual">
-        <div class="hero-photo"><img src="assets/hero.png" alt="Простой обед в керамической миске, груши и чашка на светлом столе" width="1024" height="1280" fetchpriority="high"></div>
-        <span class="photo-label">маленькие шаги · каждый день</span>
-        <div class="photo-caption"><span class="caption-mark" aria-hidden="true">✳</span><p>Место для заботы о себе.<br><span>Даже в самом насыщенном дне.</span></p></div>
-      </div>
+      <div class="hero-photo"><img src="assets/hero.png" alt="Простой обед в керамической миске, груши и чашка на светлом столе" width="1122" height="1402" fetchpriority="high"></div>
     </section>
-
-    <div class="principles-band"><div class="container"><span>Ваш привычный ритм</span><i aria-hidden="true">✳</i><span>Выполнимые шаги</span><i aria-hidden="true">✳</i><span>Внимание к повседневности</span><i aria-hidden="true">✳</i><span>Бережный диалог</span></div></div>
-
     <section id="for-you" class="section container" aria-labelledby="for-you-title">
-      <div class="section-heading"><div><p class="eyebrow">узнаёте себя?</p><h2 id="for-you-title">В жизни много дел.<br>Питанию тоже нужно место.</h2></div><p class="section-intro">Консультация для взрослых, которым хочется организовать питание под свой реальный день.</p></div>
-      <div class="situations">
-        <article class="situation"><span class="number">01 /</span><svg class="line-icon" viewBox="0 0 64 64" aria-hidden="true"><rect x="12" y="16" width="40" height="37" rx="7"/><path d="M21 10v12m22-12v12M13 29h38m-30 9h7m8 0h7m-22 8h7"/></svg><h3>День расписан,<br>а обед — как получится</h3><p>Встречи, дедлайны и дорога. Хочется найти удобное место для еды в своём расписании.</p></article>
-        <article class="situation"><span class="number">02 /</span><svg class="line-icon" viewBox="0 0 64 64" aria-hidden="true"><path d="M14 25h36l-3 27H17zM23 25v-7a9 9 0 0 1 18 0v7m-17 9 5 5 11-11"/></svg><h3>Продукты есть,<br>а что приготовить — вопрос</h3><p>Хочется планировать покупки проще и собирать подходящие варианты из обычных продуктов.</p></article>
-        <article class="situation"><span class="number">03 /</span><svg class="line-icon" viewBox="0 0 64 64" aria-hidden="true"><path d="M13 17h25a9 9 0 0 1 9 9v15H24L13 49zM23 26h15m-15 8h9M47 28h5v25l-10-7H30"/></svg><h3>Советов много.<br>Какой подходит вам?</h3><p>Нужен спокойный разговор, чтобы разобраться в привычках и выбрать, с чего начать.</p></article>
-      </div>
+      <div class="section-heading"><h2 id="for-you-title">В жизни много дел.<br>Питанию тоже нужно место.</h2><p>Консультация для взрослых, которым хочется организовать питание под свой реальный день.</p></div>
+      <div class="situations"><article class="situation"><h3>День расписан, а обед — как получится</h3><p>Встречи, дедлайны и дорога. Хочется найти удобное место для еды в своём расписании.</p></article><article class="situation"><h3>Продукты есть, а что приготовить — вопрос</h3><p>Хочется планировать покупки проще и собирать подходящие варианты из обычных продуктов.</p></article><article class="situation"><h3>Советов много. Какой подходит вам?</h3><p>Нужен спокойный разговор, чтобы разобраться в привычках и выбрать, с чего начать.</p></article></div>
     </section>
-
-    <section id="approach" class="approach section" aria-labelledby="approach-title"><div class="container approach-grid">
-      <div class="approach-art" aria-label="Учебный пример рабочего материала">
-        <div class="paper"><div class="paper-top"><span>МОЯ НЕДЕЛЯ</span><span aria-hidden="true">↗</span></div><h3>Начать с малого</h3><p>Один шаг, который подходит мне.</p><div class="paper-row"><span class="tick">✓</span><span>Посмотреть на расписание</span></div><div class="paper-row"><span class="tick">✓</span><span>Выбрать удобные варианты еды</span></div><div class="paper-row"><span class="empty-tick"></span><span>Составить список покупок</span></div><div class="paper-footer">Не идеально. Зато применимо к жизни.</div></div>
-        <span class="art-asterisk" aria-hidden="true">✳</span><span class="art-note">Учебный пример рабочего материала</span>
-      </div>
-      <div class="approach-copy"><p class="eyebrow">подход к работе</p><h2 id="approach-title">В центре — вы.<br><em>И ваша обычная жизнь.</em></h2><p>У каждого свой график, бюджет, вкусы и привычки. С них и начинается разговор о питании.</p><div class="approach-point"><span>01</span><div><h3>Сначала понять</h3><p>Обсудим, как устроен ваш день, что уже получается и что вызывает сложности.</p></div></div><div class="approach-point"><span>02</span><div><h3>Выбрать выполнимое</h3><p>Наметим два-три небольших действия, которые можно попробовать в вашем ритме.</p></div></div><div class="approach-point"><span>03</span><div><h3>Вернуться к опыту</h3><p>Через неделю коротко обсудим, что удалось применить и где возникли препятствия.</p></div></div></div>
-    </div></section>
-
-    <section id="consultation" class="section container" aria-labelledby="consultation-title">
-      <div class="consultation-card"><div class="consultation-main"><p class="eyebrow">ваш первый шаг</p><h2 id="consultation-title">Одна встреча.<br>Понятное начало.</h2><p>Индивидуальная консультация по организации повседневного питания.</p><div class="format-tags"><span>Онлайн</span><span>45–60 минут</span><span>Один на один</span></div><a href="#booking" class="button button-primary">Обсудить консультацию <span aria-hidden="true">↗</span></a><p class="price-note">Стоимость и условия согласуем по email до записи и оплаты.</p></div><div class="consultation-includes"><h3>Что входит в консультацию</h3><ul><li><span>01</span><div><strong>Разбор вашей ситуации</strong><p>Расписание, привычки, предпочтения и одна задача, с которой вы хотите разобраться.</p></div></li><li><span>02</span><div><strong>Письменное резюме</strong><p>Ключевые выводы встречи и два-три выполнимых действия.</p></div></li><li><span>03</span><div><strong>Короткая связь через неделю</strong><p>Обсуждение первых шагов и возникших трудностей.</p></div></li></ul><p class="scope-note">Формат посвящён бытовой организации питания. Диагностика, лечение, разбор анализов и назначение препаратов в него не входят.</p></div></div>
+    <section id="approach" class="section container split" aria-labelledby="approach-title">
+      <div class="stack"><p class="eyebrow">подход к работе</p><h2 id="approach-title">В центре — вы.<br><em>И ваша обычная жизнь.</em></h2><p>У каждого свой график, бюджет, вкусы и привычки. С них и начинается разговор о питании.</p><div class="section-links"><a href="about.html">Подход и границы работы</a><a href="about.html#education">Образование и опыт</a></div></div>
+      <div><div class="approach-point"><span>01</span><div><h3>Сначала понять</h3><p>Обсудим, как устроен ваш день, что уже получается и что вызывает сложности.</p></div></div><div class="approach-point"><span>02</span><div><h3>Выбрать выполнимое</h3><p>Наметим два-три небольших действия, которые можно попробовать в вашем ритме.</p></div></div><div class="approach-point"><span>03</span><div><h3>Вернуться к опыту</h3><p>Через неделю коротко обсудим, что удалось применить и где возникли препятствия.</p></div></div></div>
     </section>
-
-    <section class="section container steps-section" aria-labelledby="steps-title"><p class="eyebrow">всё просто</p><h2 id="steps-title">От знакомства к первому шагу</h2><ol class="steps"><li><span class="step-number">1</span><h3>Расскажите о задаче</h3><p>Подготовьте короткое письмо через форму ниже и отправьте его со своей почты.</p></li><li><span class="step-number">2</span><h3>Согласуем детали</h3><p>Обсудим, подходит ли вам формат, стоимость и удобное время встречи.</p></li><li><span class="step-number">3</span><h3>Встретимся онлайн</h3><p>Разберём вашу ситуацию и соберём понятные шаги для повседневной жизни.</p></li></ol></section>
-
-    <section id="faq" class="section container faq-section" aria-labelledby="faq-title"><div><p class="eyebrow">перед знакомством</p><h2 id="faq-title">Возможно,<br>вы хотите узнать</h2><p class="faq-intro">Чтобы первый шаг был спокойнее.</p></div><div class="faq-list"><details><summary>С каким запросом можно прийти?<span aria-hidden="true">+</span></summary><p>С повседневными задачами: как организовать питание в рабочие дни, планировать покупки или подобрать удобные варианты приёмов пищи. В письме достаточно выбрать общую тему — подробности обсудим отдельно.</p></details><details><summary>Нужно ли готовиться или сдавать анализы?<span aria-hidden="true">+</span></summary><p>Для первого обращения анализы не нужны. Можно заранее подумать, что именно неудобно в вашем текущем питании и что хотелось бы организовать по-другому. Медицинские документы по email отправлять не нужно.</p></details><details><summary>Это медицинская консультация?<span aria-hidden="true">+</span></summary><p>Этот формат касается повседневной организации питания. Он не включает диагностику, лечение, лечебные диеты, интерпретацию анализов или назначение добавок и лекарств. Медицинские вопросы нужно обсуждать с врачом.</p></details><details><summary>Сколько стоит консультация?<span aria-hidden="true">+</span></summary><p>Стоимость, точный состав услуги и условия вы получите по email до подтверждения записи и оплаты. Отправка первого письма ни к чему вас не обязывает.</p></details><details><summary>Как перенести или отменить встречу?<span aria-hidden="true">+</span></summary><p>Условия переноса, отмены и возврата согласуем письменно до оплаты. Если планы изменились, напишите на тот же email, по которому договаривались о встрече.</p></details></div></section>
-
-    <section id="booking" class="booking-section" aria-labelledby="booking-title"><div class="container booking-grid"><div class="booking-copy"><p class="eyebrow"><span class="small-dot"></span> начнём с знакомства</p><h2 id="booking-title">Оставьте место<br><em>для себя.</em></h2><p>Запишитесь на консультацию по питанию.<br>Расскажите немного о своей задаче —<br>дальше обсудим детали по email.</p><a class="email-link" href="mailto:mariiapshenychna@gmail.com">mariiapshenychna@gmail.com <span aria-hidden="true">↗</span></a><p class="direct-note">Можно написать напрямую, без формы.</p><span class="booking-flower" aria-hidden="true">✳</span></div>
-      <form id="booking-form" class="booking-form"><h3>Заявка на консультацию</h3><p class="form-intro">Три коротких вопроса для первого письма.</p><label for="name">Как к вам обращаться <span aria-hidden="true">*</span></label><input id="name" name="name" autocomplete="given-name" placeholder="Ваше имя или псевдоним" required maxlength="70"><label for="topic">Что хочется сделать удобнее <span aria-hidden="true">*</span></label><select id="topic" name="topic" required><option value="">Выберите тему</option><option>Питание в рабочем графике</option><option>Покупки и планирование еды</option><option>Повседневные привычки</option><option>Хочу обсудить свой запрос</option></select><label for="time">Когда удобно связаться <span class="optional">необязательно</span></label><input id="time" name="time" placeholder="Например, вечером по Москве" maxlength="120"><p class="form-privacy">Достаточно общей темы. Не указывайте диагнозы, результаты анализов и другие сведения о здоровье.</p><button class="button button-primary" type="submit">Подготовить письмо <span aria-hidden="true">↗</span></button><p class="form-note">На следующем шаге откроется текст письма.<br>Вы отправите его сами через свою почту.</p></form>
-    </div></section>
+    <section id="consultation" class="section container" aria-labelledby="format-title">
+      <div class="panel split"><div class="stack"><p class="eyebrow">ваш первый шаг</p><h2 id="format-title">Одна встреча.<br>Понятное начало.</h2><p>Индивидуальная консультация по организации повседневного питания.</p></div><div class="stack"><p>Встреча 45–60 минут, письменное резюме и короткая связь через неделю.</p><p class="price-note">Стоимость и условия согласуем по email до записи и оплаты.</p><a class="button button-primary" href="consultation.html#booking">Оставить заявку</a></div></div>
+    </section>
   </main>
-  <footer class="site-footer container"><div class="footer-top"><a class="brand" href="#"><img src="assets/mark.svg" alt="" width="34" height="40"><span>в своём ритме<small>консультации по питанию</small></span></a><p>Забота о себе начинается<br>с посильного шага.</p><a href="#booking">Записаться на консультацию ↗</a></div><div class="footer-bottom"><span>© 2026 В своём ритме</span><button id="privacy-button" type="button">Как используются данные</button><span>Онлайн · На русском языке</span></div></footer>
-  <dialog id="email-dialog" aria-labelledby="email-dialog-title"><button class="dialog-close" aria-label="Закрыть окно" type="button">×</button><p class="eyebrow">первый шаг готов</p><h2 id="email-dialog-title">Ваше письмо</h2><p>Получатель: <strong>mariiapshenychna@gmail.com</strong></p><label for="email-message">Можно изменить текст перед отправкой</label><textarea id="email-message" rows="9" maxlength="2500"></textarea><a id="open-email" class="button button-primary" href="mailto:mariiapshenychna@gmail.com">Открыть почту <span aria-hidden="true">↗</span></a><button id="copy-message" class="copy-button" type="button">Скопировать текст письма</button><p id="email-status" role="status" aria-live="polite">Письмо ещё не отправлено. Отправьте его в почтовом приложении. Если приложение не откроется, скопируйте текст и отправьте вручную.</p></dialog>
-  <dialog id="privacy-dialog" aria-labelledby="privacy-title"><button class="dialog-close" aria-label="Закрыть окно" type="button">×</button><p class="eyebrow">прозрачно и просто</p><h2 id="privacy-title">О ваших данных</h2><p>Форма составляет текст письма в вашем браузере. Её поля не передаются на сервер сайта и не сохраняются сайтом в cookies или локальном хранилище.</p><p>Кнопка «Открыть почту» передаёт подготовленный текст вашему почтовому приложению. Письмо получает mariiapshenychna@gmail.com только после того, как вы самостоятельно нажмёте «Отправить» в почте.</p><p>Для первого обращения достаточно имени и общей темы. Не отправляйте сведения о здоровье. По вопросам использования или удаления отправленного письма можно обратиться на этот же email.</p><p>На сайте нет подключённых рекламных пикселей и сервисов аналитики. Хостинг и почтовый сервис могут обрабатывать технические данные по своим правилам.</p></dialog>
+  <footer class="site-footer">
+    <div class="container footer-inner"><span>© 2026 В своём ритме</span><div class="footer-links"><a href="contacts.html">Контакты и документы</a><a href="contacts.html#privacy">Как используются данные</a><span>Онлайн · На русском языке</span></div></div>
+  </footer>
+  
 </body>
 </html>

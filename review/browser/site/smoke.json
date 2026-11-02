@@ -1,0 +1,41 @@
+{
+  "results": [
+    {
+      "page": "index",
+      "status": 200,
+      "height": 1790,
+      "violations": []
+    },
+    {
+      "page": "about",
+      "status": 200,
+      "height": 1198,
+      "violations": []
+    },
+    {
+      "page": "consultation",
+      "status": 200,
+      "height": 2218,
+      "violations": []
+    },
+    {
+      "page": "materials",
+      "status": 200,
+      "height": 1095,
+      "violations": []
+    },
+    {
+      "page": "contacts",
+      "status": 200,
+      "height": 1496,
+      "violations": []
+    },
+    {
+      "page": "club",
+      "status": 200,
+      "height": 900,
+      "violations": []
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,969 @@
+{
+  "date": "2026-11-02T18:11:59.715Z",
+  "url": "http://127.0.0.1:5601/",
+  "source": "nutrition_brand_strategy.docx, раздел 7",
+  "files": {
+    "about.html": "f10ca84ee556305ea2da39a07255efc78be7565e04fd0f02f038f9d6badf7705",
+    "club.html": "db9a781ae078be06e5108359ad018eec47d3579dd82c968b2074b2dca2ed04f0",
+    "consultation.html": "999634381af3c1ae12cfefc9250bec5fe5679f8798428bd932eda4f5c9d865ec",
+    "contacts.html": "aabcc2ea94ebf7dcff160ebc06fad5891dfa35cbcecb0627c6f1b4ebfdc564b6",
+    "index.html": "7a2c5bc97deb9fe8b20726f761dc96051a701e1c2d26780a1e59812260f872a8",
+    "materials.html": "8ce40771a1c23ed72cfec14f05bc80439bb0f37c529b5e3e6ea001b2b97f2b0a",
+    "styles.css": "afc6b893c3e0a16f6046552dc2d1cc99dbe84db58da44569017fb2a8ed01fbcd",
+    "app.js": "444607b77de2284f7e2a4f0d6bcddf96c9daed8a2f030f544136d104f798e0e6",
+    "assets/hero.png": "c790084147484bdd140e722b9cf5d1700e94819591f5c514d8236f3b741a145e",
+    "assets/mark.svg": "641081ac782edac7b6c69ca423046cc4a3dad9b57b116a907266e27f2511e418"
+  },
+  "engines": [
+    {
+      "engine": "chromium",
+      "version": "156.0.8078.4",
+      "status": "STARTED"
+    },
+    {
+      "engine": "firefox",
+      "version": "157.0",
+      "status": "STARTED"
+    }
+  ],
+  "cases": [
+    {
+      "engine": "chromium",
+      "id": "PAGE-index.html",
+      "title": "Главная: загрузка, структура, изображения и все ссылки",
+      "evidence": {
+        "links": 16
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "id": "AXE-index.html",
+      "title": "Главная: автоматическая проверка доступности",
+      "evidence": {
+        "violations": [],
+        "incomplete": [],
+        "passes": 18
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "id": "PAGE-about.html",
+      "title": "Обо мне: загрузка, структура, изображения и все ссылки",
+      "evidence": {
+        "links": 13
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "id": "AXE-about.html",
+      "title": "Обо мне: автоматическая проверка доступности",
+      "evidence": {
+        "violations": [],
+        "incomplete": [],
+        "passes": 17
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "id": "PAGE-consultation.html",
+      "title": "Консультация: загрузка, структура, изображения и все ссылки",
+      "evidence": {
+        "links": 16
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "id": "AXE-consultation.html",
+      "title": "Консультация: автоматическая проверка доступности",
+      "evidence": {
+        "violations": [],
+        "incomplete": [],
+        "passes": 26
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "id": "PAGE-materials.html",
+      "title": "Материалы: загрузка, структура, изображения и все ссылки",
+      "evidence": {
+        "links": 12
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "id": "AXE-materials.html",
+      "title": "Материалы: автоматическая проверка доступности",
+      "evidence": {
+        "violations": [],
+        "incomplete": [],
+        "passes": 17
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "id": "PAGE-contacts.html",
+      "title": "Контакты и документы: загрузка, структура, изображения и все ссылки",
+      "evidence": {
+        "links": 12
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "id": "AXE-contacts.html",
+      "title": "Контакты и документы: автоматическая проверка доступности",
+      "evidence": {
+        "violations": [],
+        "incomplete": [],
+        "passes": 17
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "id": "PAGE-club.html",
+      "title": "Клуб: загрузка, структура, изображения и все ссылки",
+      "evidence": {
+        "links": 13
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "id": "AXE-club.html",
+      "title": "Клуб: автоматическая проверка доступности",
+      "evidence": {
+        "violations": [],
+        "incomplete": [],
+        "passes": 17
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "id": "NAV",
+      "title": "Все шесть переходов настольного и мобильного меню",
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "id": "FORM",
+      "title": "Обязательные поля, пробелы, четыре темы, редактирование письма",
+      "evidence": {
+        "topics": 4,
+        "externalMailIntercepted": true
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "id": "COPY",
+      "title": "Копирование письма и ручное выделение при отказе",
+      "evidence": {
+        "normalStatus": "Текст скопирован. Вставьте его в письмо для mariiapshenychna@gmail.com и отправьте со своей почты.",
+        "clipboardReadBack": true,
+        "fallbackSelected": true
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "id": "DIALOG",
+      "title": "Окно письма: крестик, Escape, фон и удержание фокуса",
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "id": "KEYBOARD",
+      "title": "Клавиатурная запись, ограничения полей и FAQ",
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "id": "CLUB",
+      "title": "Выражение интереса к клубу через почтовую ссылку",
+      "evidence": {
+        "externalMailIntercepted": true
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "id": "VIEW-320",
+      "title": "Шесть страниц и окно письма при 320 × 780",
+      "evidence": {
+        "pages": 6,
+        "width": 320,
+        "height": 780
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "id": "VIEW-375",
+      "title": "Шесть страниц и окно письма при 375 × 812",
+      "evidence": {
+        "pages": 6,
+        "width": 375,
+        "height": 812
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "id": "VIEW-768",
+      "title": "Шесть страниц и окно письма при 768 × 1024",
+      "evidence": {
+        "pages": 6,
+        "width": 768,
+        "height": 1024
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "id": "VIEW-812",
+      "title": "Шесть страниц и окно письма при 812 × 375",
+      "evidence": {
+        "pages": 6,
+        "width": 812,
+        "height": 375
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "id": "VIEW-1100",
+      "title": "Шесть страниц и окно письма при 1100 × 900",
+      "evidence": {
+        "pages": 6,
+        "width": 1100,
+        "height": 900
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "id": "VIEW-1101",
+      "title": "Шесть страниц и окно письма при 1101 × 900",
+      "evidence": {
+        "pages": 6,
+        "width": 1101,
+        "height": 900
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "id": "VIEW-1440",
+      "title": "Шесть страниц и окно письма при 1440 × 900",
+      "evidence": {
+        "pages": 6,
+        "width": 1440,
+        "height": 900
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "id": "AXE-EXTRA",
+      "title": "Доступность открытого мобильного меню и окна письма",
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "id": "FAULT-no-js-click",
+      "title": "Защита данных при no-js, click",
+      "evidence": {
+        "fallbackVisible": true,
+        "disabledByDefault": true,
+        "nativeSubmissionWithoutFields": true,
+        "outgoing": [
+          {
+            "url": "http://127.0.0.1:5601/consultation.html?",
+            "body": null
+          },
+          {
+            "url": "http://127.0.0.1:5601/styles.css",
+            "body": null
+          },
+          {
+            "url": "http://127.0.0.1:5601/assets/mark.svg",
+            "body": null
+          }
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "id": "FAULT-no-js-enter",
+      "title": "Защита данных при no-js, enter",
+      "evidence": {
+        "fallbackVisible": true,
+        "disabledByDefault": true,
+        "nativeSubmissionWithoutFields": true,
+        "outgoing": [
+          {
+            "url": "http://127.0.0.1:5601/consultation.html?",
+            "body": null
+          },
+          {
+            "url": "http://127.0.0.1:5601/styles.css",
+            "body": null
+          },
+          {
+            "url": "http://127.0.0.1:5601/assets/mark.svg",
+            "body": null
+          }
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "id": "FAULT-blocked-js-click",
+      "title": "Защита данных при blocked-js, click",
+      "evidence": {
+        "fallbackVisible": true,
+        "disabledByDefault": true,
+        "nativeSubmissionWithoutFields": true,
+        "outgoing": [
+          {
+            "url": "http://127.0.0.1:5601/consultation.html?",
+            "body": null
+          },
+          {
+            "url": "http://127.0.0.1:5601/styles.css",
+            "body": null
+          },
+          {
+            "url": "http://127.0.0.1:5601/app.js",
+            "body": null
+          },
+          {
+            "url": "http://127.0.0.1:5601/assets/mark.svg",
+            "body": null
+          }
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "id": "FAULT-blocked-js-enter",
+      "title": "Защита данных при blocked-js, enter",
+      "evidence": {
+        "fallbackVisible": true,
+        "disabledByDefault": true,
+        "nativeSubmissionWithoutFields": true,
+        "outgoing": [
+          {
+            "url": "http://127.0.0.1:5601/consultation.html?",
+            "body": null
+          },
+          {
+            "url": "http://127.0.0.1:5601/styles.css",
+            "body": null
+          },
+          {
+            "url": "http://127.0.0.1:5601/app.js",
+            "body": null
+          },
+          {
+            "url": "http://127.0.0.1:5601/assets/mark.svg",
+            "body": null
+          }
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "id": "FAULT-init-error-click",
+      "title": "Защита данных при init-error, click",
+      "evidence": {
+        "fallbackVisible": true,
+        "disabledByDefault": true,
+        "nativeSubmissionWithoutFields": true,
+        "outgoing": [
+          {
+            "url": "http://127.0.0.1:5601/consultation.html?",
+            "body": null
+          },
+          {
+            "url": "http://127.0.0.1:5601/styles.css",
+            "body": null
+          },
+          {
+            "url": "http://127.0.0.1:5601/app.js",
+            "body": null
+          },
+          {
+            "url": "http://127.0.0.1:5601/assets/mark.svg",
+            "body": null
+          }
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "id": "FAULT-init-error-enter",
+      "title": "Защита данных при init-error, enter",
+      "evidence": {
+        "fallbackVisible": true,
+        "disabledByDefault": true,
+        "nativeSubmissionWithoutFields": true,
+        "outgoing": [
+          {
+            "url": "http://127.0.0.1:5601/consultation.html?",
+            "body": null
+          },
+          {
+            "url": "http://127.0.0.1:5601/styles.css",
+            "body": null
+          },
+          {
+            "url": "http://127.0.0.1:5601/app.js",
+            "body": null
+          },
+          {
+            "url": "http://127.0.0.1:5601/assets/mark.svg",
+            "body": null
+          }
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "id": "RUNTIME",
+      "title": "Ошибки браузера, хранение и уменьшение анимаций",
+      "evidence": {
+        "errors": [],
+        "failedRequests": []
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "chromium",
+      "id": "SERVER",
+      "title": "Неизвестные URL и защита каталога",
+      "evidence": [
+        {
+          "path": "missing-browser-test",
+          "status": 404
+        },
+        {
+          "path": "..%2fREADME.md",
+          "status": 403
+        },
+        {
+          "path": "assets/..%2f..%2fREADME.md",
+          "status": 403
+        },
+        {
+          "path": "%E0%A4%A",
+          "status": 404
+        },
+        {
+          "path": ".env",
+          "status": 404
+        }
+      ],
+      "status": "PASS"
+    },
+    {
+      "engine": "firefox",
+      "id": "PAGE-index.html",
+      "title": "Главная: загрузка, структура, изображения и все ссылки",
+      "evidence": {
+        "links": 16
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "firefox",
+      "id": "AXE-index.html",
+      "title": "Главная: автоматическая проверка доступности",
+      "evidence": {
+        "violations": [],
+        "incomplete": [],
+        "passes": 18
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "firefox",
+      "id": "PAGE-about.html",
+      "title": "Обо мне: загрузка, структура, изображения и все ссылки",
+      "evidence": {
+        "links": 13
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "firefox",
+      "id": "AXE-about.html",
+      "title": "Обо мне: автоматическая проверка доступности",
+      "evidence": {
+        "violations": [],
+        "incomplete": [],
+        "passes": 17
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "firefox",
+      "id": "PAGE-consultation.html",
+      "title": "Консультация: загрузка, структура, изображения и все ссылки",
+      "evidence": {
+        "links": 16
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "firefox",
+      "id": "AXE-consultation.html",
+      "title": "Консультация: автоматическая проверка доступности",
+      "evidence": {
+        "violations": [],
+        "incomplete": [],
+        "passes": 26
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "firefox",
+      "id": "PAGE-materials.html",
+      "title": "Материалы: загрузка, структура, изображения и все ссылки",
+      "evidence": {
+        "links": 12
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "firefox",
+      "id": "AXE-materials.html",
+      "title": "Материалы: автоматическая проверка доступности",
+      "evidence": {
+        "violations": [],
+        "incomplete": [],
+        "passes": 17
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "firefox",
+      "id": "PAGE-contacts.html",
+      "title": "Контакты и документы: загрузка, структура, изображения и все ссылки",
+      "evidence": {
+        "links": 12
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "firefox",
+      "id": "AXE-contacts.html",
+      "title": "Контакты и документы: автоматическая проверка доступности",
+      "evidence": {
+        "violations": [],
+        "incomplete": [],
+        "passes": 17
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "firefox",
+      "id": "PAGE-club.html",
+      "title": "Клуб: загрузка, структура, изображения и все ссылки",
+      "evidence": {
+        "links": 13
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "firefox",
+      "id": "AXE-club.html",
+      "title": "Клуб: автоматическая проверка доступности",
+      "evidence": {
+        "violations": [],
+        "incomplete": [],
+        "passes": 17
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "firefox",
+      "id": "NAV",
+      "title": "Все шесть переходов настольного и мобильного меню",
+      "status": "PASS"
+    },
+    {
+      "engine": "firefox",
+      "id": "FORM",
+      "title": "Обязательные поля, пробелы, четыре темы, редактирование письма",
+      "evidence": {
+        "topics": 4,
+        "externalMailIntercepted": true
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "firefox",
+      "id": "COPY",
+      "title": "Копирование письма и ручное выделение при отказе",
+      "evidence": {
+        "normalStatus": "Текст скопирован. Вставьте его в письмо для mariiapshenychna@gmail.com и отправьте со своей почты.",
+        "clipboardReadBack": false,
+        "fallbackSelected": true
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "firefox",
+      "id": "DIALOG",
+      "title": "Окно письма: крестик, Escape, фон и удержание фокуса",
+      "status": "PASS"
+    },
+    {
+      "engine": "firefox",
+      "id": "KEYBOARD",
+      "title": "Клавиатурная запись, ограничения полей и FAQ",
+      "status": "PASS"
+    },
+    {
+      "engine": "firefox",
+      "id": "CLUB",
+      "title": "Выражение интереса к клубу через почтовую ссылку",
+      "evidence": {
+        "externalMailIntercepted": true
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "firefox",
+      "id": "VIEW-320",
+      "title": "Шесть страниц и окно письма при 320 × 780",
+      "evidence": {
+        "pages": 6,
+        "width": 320,
+        "height": 780
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "firefox",
+      "id": "VIEW-375",
+      "title": "Шесть страниц и окно письма при 375 × 812",
+      "evidence": {
+        "pages": 6,
+        "width": 375,
+        "height": 812
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "firefox",
+      "id": "VIEW-768",
+      "title": "Шесть страниц и окно письма при 768 × 1024",
+      "evidence": {
+        "pages": 6,
+        "width": 768,
+        "height": 1024
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "firefox",
+      "id": "VIEW-812",
+      "title": "Шесть страниц и окно письма при 812 × 375",
+      "evidence": {
+        "pages": 6,
+        "width": 812,
+        "height": 375
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "firefox",
+      "id": "VIEW-1100",
+      "title": "Шесть страниц и окно письма при 1100 × 900",
+      "evidence": {
+        "pages": 6,
+        "width": 1100,
+        "height": 900
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "firefox",
+      "id": "VIEW-1101",
+      "title": "Шесть страниц и окно письма при 1101 × 900",
+      "evidence": {
+        "pages": 6,
+        "width": 1101,
+        "height": 900
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "firefox",
+      "id": "VIEW-1440",
+      "title": "Шесть страниц и окно письма при 1440 × 900",
+      "evidence": {
+        "pages": 6,
+        "width": 1440,
+        "height": 900
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "firefox",
+      "id": "AXE-EXTRA",
+      "title": "Доступность открытого мобильного меню и окна письма",
+      "status": "PASS"
+    },
+    {
+      "engine": "firefox",
+      "id": "FAULT-no-js-click",
+      "title": "Защита данных при no-js, click",
+      "evidence": {
+        "fallbackVisible": true,
+        "disabledByDefault": true,
+        "nativeSubmissionWithoutFields": true,
+        "outgoing": [
+          {
+            "url": "http://127.0.0.1:5601/consultation.html?",
+            "body": null
+          },
+          {
+            "url": "http://127.0.0.1:5601/styles.css",
+            "body": null
+          },
+          {
+            "url": "http://127.0.0.1:5601/assets/mark.svg",
+            "body": null
+          },
+          {
+            "url": "http://127.0.0.1:5601/assets/mark.svg",
+            "body": null
+          }
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "firefox",
+      "id": "FAULT-no-js-enter",
+      "title": "Защита данных при no-js, enter",
+      "evidence": {
+        "fallbackVisible": true,
+        "disabledByDefault": true,
+        "nativeSubmissionWithoutFields": true,
+        "outgoing": [
+          {
+            "url": "http://127.0.0.1:5601/consultation.html?",
+            "body": null
+          },
+          {
+            "url": "http://127.0.0.1:5601/styles.css",
+            "body": null
+          },
+          {
+            "url": "http://127.0.0.1:5601/assets/mark.svg",
+            "body": null
+          },
+          {
+            "url": "http://127.0.0.1:5601/assets/mark.svg",
+            "body": null
+          }
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "firefox",
+      "id": "FAULT-blocked-js-click",
+      "title": "Защита данных при blocked-js, click",
+      "evidence": {
+        "fallbackVisible": true,
+        "disabledByDefault": true,
+        "nativeSubmissionWithoutFields": true,
+        "outgoing": [
+          {
+            "url": "http://127.0.0.1:5601/consultation.html?",
+            "body": null
+          },
+          {
+            "url": "http://127.0.0.1:5601/styles.css",
+            "body": null
+          },
+          {
+            "url": "http://127.0.0.1:5601/app.js",
+            "body": null
+          },
+          {
+            "url": "http://127.0.0.1:5601/assets/mark.svg",
+            "body": null
+          },
+          {
+            "url": "http://127.0.0.1:5601/assets/mark.svg",
+            "body": null
+          }
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "firefox",
+      "id": "FAULT-blocked-js-enter",
+      "title": "Защита данных при blocked-js, enter",
+      "evidence": {
+        "fallbackVisible": true,
+        "disabledByDefault": true,
+        "nativeSubmissionWithoutFields": true,
+        "outgoing": [
+          {
+            "url": "http://127.0.0.1:5601/consultation.html?",
+            "body": null
+          },
+          {
+            "url": "http://127.0.0.1:5601/styles.css",
+            "body": null
+          },
+          {
+            "url": "http://127.0.0.1:5601/app.js",
+            "body": null
+          },
+          {
+            "url": "http://127.0.0.1:5601/assets/mark.svg",
+            "body": null
+          },
+          {
+            "url": "http://127.0.0.1:5601/assets/mark.svg",
+            "body": null
+          }
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "firefox",
+      "id": "FAULT-init-error-click",
+      "title": "Защита данных при init-error, click",
+      "evidence": {
+        "fallbackVisible": true,
+        "disabledByDefault": true,
+        "nativeSubmissionWithoutFields": true,
+        "outgoing": [
+          {
+            "url": "http://127.0.0.1:5601/consultation.html?",
+            "body": null
+          },
+          {
+            "url": "http://127.0.0.1:5601/styles.css",
+            "body": null
+          },
+          {
+            "url": "http://127.0.0.1:5601/app.js",
+            "body": null
+          },
+          {
+            "url": "http://127.0.0.1:5601/assets/mark.svg",
+            "body": null
+          },
+          {
+            "url": "http://127.0.0.1:5601/assets/mark.svg",
+            "body": null
+          }
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "firefox",
+      "id": "FAULT-init-error-enter",
+      "title": "Защита данных при init-error, enter",
+      "evidence": {
+        "fallbackVisible": true,
+        "disabledByDefault": true,
+        "nativeSubmissionWithoutFields": true,
+        "outgoing": [
+          {
+            "url": "http://127.0.0.1:5601/consultation.html?",
+            "body": null
+          },
+          {
+            "url": "http://127.0.0.1:5601/styles.css",
+            "body": null
+          },
+          {
+            "url": "http://127.0.0.1:5601/app.js",
+            "body": null
+          },
+          {
+            "url": "http://127.0.0.1:5601/assets/mark.svg",
+            "body": null
+          },
+          {
+            "url": "http://127.0.0.1:5601/assets/mark.svg",
+            "body": null
+          }
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "firefox",
+      "id": "RUNTIME",
+      "title": "Ошибки браузера, хранение и уменьшение анимаций",
+      "evidence": {
+        "errors": [],
+        "failedRequests": []
+      },
+      "status": "PASS"
+    },
+    {
+      "engine": "firefox",
+      "id": "SERVER",
+      "title": "Неизвестные URL и защита каталога",
+      "evidence": [
+        {
+          "path": "missing-browser-test",
+          "status": 404
+        },
+        {
+          "path": "..%2fREADME.md",
+          "status": 403
+        },
+        {
+          "path": "assets/..%2f..%2fREADME.md",
+          "status": 403
+        },
+        {
+          "path": "%E0%A4%A",
+          "status": 404
+        },
+        {
+          "path": ".env",
+          "status": 404
+        }
+      ],
+      "status": "PASS"
+    }
+  ],
+  "summary": {
+    "passed": 68,
+    "failed": 0
+  }
+}

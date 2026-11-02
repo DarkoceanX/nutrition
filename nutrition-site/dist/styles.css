@@ -11,7 +11,8 @@
 *{box-sizing:border-box}
 [hidden]{display:none!important}
 html{scroll-behavior:auto;scroll-padding-top:var(--space-6)}
-body{margin:0;background:var(--paper);color:var(--ink);font:var(--text-base)/1.65 var(--sans)}
+body{margin:0;background:var(--paper);color:var(--ink);font:var(--text-base)/1.65 var(--sans);min-height:100svh;display:flex;flex-direction:column}
+main{flex:1}
 button,input,select,textarea{font:inherit}
 button,a,input,select,textarea,summary{-webkit-tap-highlight-color:transparent}
 button,a{touch-action:manipulation}
