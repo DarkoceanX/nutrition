@@ -1,0 +1,45 @@
+{
+  "createdAt": "2026-11-02T18:14:20.403Z",
+  "source": "nutrition-site/dist",
+  "files": {
+    "index.html": "7a2c5bc97deb9fe8b20726f761dc96051a701e1c2d26780a1e59812260f872a8",
+    "about.html": "f10ca84ee556305ea2da39a07255efc78be7565e04fd0f02f038f9d6badf7705",
+    "consultation.html": "999634381af3c1ae12cfefc9250bec5fe5679f8798428bd932eda4f5c9d865ec",
+    "materials.html": "8ce40771a1c23ed72cfec14f05bc80439bb0f37c529b5e3e6ea001b2b97f2b0a",
+    "contacts.html": "aabcc2ea94ebf7dcff160ebc06fad5891dfa35cbcecb0627c6f1b4ebfdc564b6",
+    "club.html": "db9a781ae078be06e5108359ad018eec47d3579dd82c968b2074b2dca2ed04f0",
+    "styles.css": "afc6b893c3e0a16f6046552dc2d1cc99dbe84db58da44569017fb2a8ed01fbcd",
+    "app.js": "444607b77de2284f7e2a4f0d6bcddf96c9daed8a2f030f544136d104f798e0e6",
+    "assets/mark.svg": "641081ac782edac7b6c69ca423046cc4a3dad9b57b116a907266e27f2511e418",
+    "assets/hero.png": "c790084147484bdd140e722b9cf5d1700e94819591f5c514d8236f3b741a145e"
+  },
+  "pages": {
+    "index.html": {
+      "sha256": "eb87a79fca78c266a2c5d2eab106d325ae2eb5f5f07a336dfa682aea6ad96846",
+      "bytes": 3574075
+    },
+    "about.html": {
+      "sha256": "648b256a0e10260cb1dd025872191b1dd03f6c8e696e73609887fccf2e7d755c",
+      "bytes": 23266
+    },
+    "consultation.html": {
+      "sha256": "2d93ebf79e12d2bd980eee5b0b047ce3ed346ed0be76aa933ca359ec4231a9ea",
+      "bytes": 30044
+    },
+    "materials.html": {
+      "sha256": "16f2f97b79966ee5b606f51ab5f4f20f4bd6af25915e2fca52139ddbcbb005e7",
+      "bytes": 22271
+    },
+    "contacts.html": {
+      "sha256": "265b719dcd8dd1b59ab0b79f43e9620d409e6c4031413c36a29b989789aa11db",
+      "bytes": 23968
+    },
+    "club.html": {
+      "sha256": "bd6f8ab14f5ae049c1bcf1389ea3dc4fa69561950b300d515af77508d22744ef",
+      "bytes": 22869
+    }
+  },
+  "directory": ".cache/browser-check/site-preview",
+  "archive": "review/site-preview.zip",
+  "archiveSha256": "15f5d207e4f3dc188e5d1d5bf8f17ff86d0f4b2e74a13f65a39855f12902181d"
+}

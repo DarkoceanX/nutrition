@@ -1,0 +1,72 @@
+{
+  "checkedAt": "2026-11-01T17:27:31.699Z",
+  "requestOrigin": "Сервер проекта; это не независимая внешняя проверка",
+  "observedBefore": "На порту 5601 не было слушающего процесса; localhost возвращал отказ соединения",
+  "recovery": "Запуск через механизм превью VibeForge",
+  "processId": 34136,
+  "processWorkingDirectory": "/home/vibeforge/.local/share/vibeforge/worktrees/c76e2bbd-4921-4c2f-b1d3-9331b1cec160/session",
+  "previousExitCause": null,
+  "userObservation": "Пользователь подтвердил, что сайт открывался ранее, затем перестал открываться",
+  "checks": [
+    {
+      "url": "http://127.0.0.1:5601/",
+      "status": 200,
+      "bytes": 19220,
+      "sha256": "8bcb421fdc47061a11073d1cdc92313fa33c3c84f31b70df96a3741c16f930e2"
+    },
+    {
+      "url": "http://127.0.0.1:5601/styles.css",
+      "status": 200,
+      "bytes": 19601,
+      "sha256": "7e6d93e20ac848a21a438c62f1c08b1dca678b88ed4871c3354d64a28e562522"
+    },
+    {
+      "url": "http://127.0.0.1:5601/app.js",
+      "status": 200,
+      "bytes": 3179,
+      "sha256": "00445a1aea42f8320cb739a08a911cb4f32631266223e5be0584dc94358adc93"
+    },
+    {
+      "url": "http://127.0.0.1:5601/assets/hero.png",
+      "status": 200,
+      "bytes": 2661374,
+      "sha256": "c790084147484bdd140e722b9cf5d1700e94819591f5c514d8236f3b741a145e"
+    },
+    {
+      "url": "http://127.0.0.1:5601/assets/mark.svg",
+      "status": 200,
+      "bytes": 371,
+      "sha256": "641081ac782edac7b6c69ca423046cc4a3dad9b57b116a907266e27f2511e418"
+    },
+    {
+      "url": "http://199.195.196.219:5601/",
+      "status": 200,
+      "bytes": 19220,
+      "sha256": "8bcb421fdc47061a11073d1cdc92313fa33c3c84f31b70df96a3741c16f930e2"
+    },
+    {
+      "url": "http://199.195.196.219:5601/styles.css",
+      "status": 200,
+      "bytes": 19601,
+      "sha256": "7e6d93e20ac848a21a438c62f1c08b1dca678b88ed4871c3354d64a28e562522"
+    },
+    {
+      "url": "http://199.195.196.219:5601/app.js",
+      "status": 200,
+      "bytes": 3179,
+      "sha256": "00445a1aea42f8320cb739a08a911cb4f32631266223e5be0584dc94358adc93"
+    },
+    {
+      "url": "http://199.195.196.219:5601/assets/hero.png",
+      "status": 200,
+      "bytes": 2661374,
+      "sha256": "c790084147484bdd140e722b9cf5d1700e94819591f5c514d8236f3b741a145e"
+    },
+    {
+      "url": "http://199.195.196.219:5601/assets/mark.svg",
+      "status": 200,
+      "bytes": 371,
+      "sha256": "641081ac782edac7b6c69ca423046cc4a3dad9b57b116a907266e27f2511e418"
+    }
+  ]
+}

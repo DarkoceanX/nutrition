@@ -1,0 +1,46 @@
+{
+  "date": "2026-11-02T18:31:54.537Z",
+  "requestOrigin": "Браузеры запущены на сервере проекта; это не проверка с устройства посетителя",
+  "checks": [
+    {
+      "url": "http://199.195.196.219:5601/",
+      "status": 200,
+      "sha256": "7a2c5bc97deb9fe8b20726f761dc96051a701e1c2d26780a1e59812260f872a8"
+    },
+    {
+      "url": "http://199.195.196.219:5601/about.html",
+      "status": 200,
+      "sha256": "f10ca84ee556305ea2da39a07255efc78be7565e04fd0f02f038f9d6badf7705"
+    },
+    {
+      "url": "http://199.195.196.219:5601/consultation.html",
+      "status": 200,
+      "sha256": "999634381af3c1ae12cfefc9250bec5fe5679f8798428bd932eda4f5c9d865ec"
+    },
+    {
+      "url": "http://199.195.196.219:5601/materials.html",
+      "status": 200,
+      "sha256": "8ce40771a1c23ed72cfec14f05bc80439bb0f37c529b5e3e6ea001b2b97f2b0a"
+    },
+    {
+      "url": "http://199.195.196.219:5601/contacts.html",
+      "status": 200,
+      "sha256": "aabcc2ea94ebf7dcff160ebc06fad5891dfa35cbcecb0627c6f1b4ebfdc564b6"
+    },
+    {
+      "url": "http://199.195.196.219:5601/club.html",
+      "status": 200,
+      "sha256": "db9a781ae078be06e5108359ad018eec47d3579dd82c968b2074b2dca2ed04f0"
+    },
+    {
+      "url": "http://199.195.196.219:5601/styles.css",
+      "status": 200,
+      "sha256": "afc6b893c3e0a16f6046552dc2d1cc99dbe84db58da44569017fb2a8ed01fbcd"
+    },
+    {
+      "url": "http://199.195.196.219:5601/app.js",
+      "status": 200,
+      "sha256": "444607b77de2284f7e2a4f0d6bcddf96c9daed8a2f030f544136d104f798e0e6"
+    }
+  ]
+}

@@ -1,68 +1,75 @@
 import { join } from 'node:path';
-import { browsers, output, baseURL, interceptMail } from './common.mjs';
+import { mkdir, writeFile } from 'node:fs/promises';
+import { pathToFileURL } from 'node:url';
+import { browsers, root, output, baseURL, interceptMail } from './common.mjs';
 
-const browser = await browsers.chromium.launch({ headless: true });
-async function record(name, viewport, mobile, action) {
-  const context = await browser.newContext({ viewport, locale:'ru-RU', isMobile:mobile, hasTouch:mobile, recordVideo:{dir:output,size:viewport} });
-  await context.grantPermissions(['clipboard-read','clipboard-write'],{origin:new URL(baseURL).origin});
-  await interceptMail(context);
-  const page = await context.newPage();
-  const video = page.video();
-  page.setDefaultTimeout(7000);
-  const pause = (ms = 1000) => page.waitForTimeout(ms);
-  const label = text => page.evaluate(text => {
-    document.querySelector('#qa-demo-label')?.remove();
-    const tag = document.createElement('div');
-    tag.id = 'qa-demo-label'; tag.textContent = `Демонстрация: ${text}`;
-    Object.assign(tag.style,{position:'fixed',left:'12px',top:'8px',maxWidth:'calc(100vw - 24px)',padding:'7px 12px',border:'1px solid var(--line)',borderRadius:'7px',background:'var(--paper)',color:'var(--ink)',font:'12px Arial',zIndex:'2147483647',pointerEvents:'none'});
-    (document.querySelector('dialog[open]') || document.body).append(tag);
-  },text);
-  try {
-    await page.goto(baseURL,{waitUntil:'networkidle'});
-    await action(page,label,pause);
-  } finally {
-    await context.close();
-    await video.saveAs(join(output,`${name}.webm`));
-    await video.delete();
+const dir=join(output,'site');
+await mkdir(dir,{recursive:true});
+const videoCache=join(root,'.cache/browser-check/videos');
+await mkdir(videoCache,{recursive:true});
+const pages=[['index.html','Главная'],['about.html','Обо мне'],['consultation.html','Консультация'],['materials.html','Материалы'],['contacts.html','Контакты и документы'],['club.html','Клуб']];
+const browser=await browsers.chromium.launch({headless:true});
+async function record(name,viewport,mobile){
+ const context=await browser.newContext({viewport,locale:'ru-RU',isMobile:mobile,hasTouch:mobile,recordVideo:{dir:videoCache,size:viewport}});
+ await context.grantPermissions(['clipboard-read','clipboard-write'],{origin:new URL(baseURL).origin});
+ await interceptMail(context);
+ const page=await context.newPage(),video=page.video();
+ page.setDefaultTimeout(7000);
+ const label=text=>page.evaluate(text=>{
+  document.querySelector('#qa-demo-label')?.remove();
+  const tag=document.createElement('div');
+  tag.id='qa-demo-label';tag.textContent='Демонстрация: '+text;
+  Object.assign(tag.style,{position:'fixed',right:'12px',bottom:'8px',maxWidth:'calc(100vw - 24px)',padding:'7px 12px',border:'1px solid var(--line)',borderRadius:'8px',background:'var(--paper)',color:'var(--ink)',font:'12px Arial',zIndex:'2147483647',pointerEvents:'none'});
+  (document.querySelector('dialog[open]')||document.body).append(tag);
+ },text);
+ const pause=()=>page.waitForTimeout(1100);
+ async function navigate(file){
+  if(mobile)await page.locator('#menu-toggle').click();
+  await page.locator('#site-nav a[href="'+file+'"]').click();
+  await page.waitForURL(new URL(file,baseURL).href);
+ }
+ try{
+  await page.goto(baseURL,{waitUntil:'networkidle'});
+  for(const [file,title] of pages){
+   await navigate(file);await label(title);await pause();
+   if(file==='materials.html'||file==='contacts.html'){
+    await page.locator(file==='materials.html'?'#example-title':'#privacy').scrollIntoViewIfNeeded();await pause();
+   }
   }
+  await page.locator('#club-interest').click();await label('интерес к будущему пилоту, письмо не отправляется');await pause();
+  await navigate('consultation.html');
+  await page.locator('details summary').first().click();await label('ответ на вопрос');await pause();
+  await page.locator('details summary').first().click();
+  await page.locator('#name').fill('Тестовая заявка');
+  await page.locator('#topic').selectOption({index:2});
+  await page.locator('#time').fill('Тест: вечером');
+  await label('подготовка письма');await pause();
+  await page.locator('#booking-form button').click();
+  await page.locator('#email-dialog').waitFor({state:'visible'});
+  await label('редактируемый текст письма');await pause();
+  await page.locator('#copy-message').click();await pause();
+  await page.locator('#open-email').click();await label('почтовая ссылка проверена без отправки');await pause();
+  await page.locator('#email-dialog .dialog-close').click();
+  await navigate('index.html');await label('все шесть страниц доступны из меню');await pause();
+ }finally{
+  await context.close();
+  await video.saveAs(join(dir,name+'.webm'));await video.delete();
+ }
+ console.log('Записано видео: '+name);
 }
-try {
-  await record('desktop-demo',{width:1280,height:800},false,async(page,label,pause)=>{
-    await label('главная страница'); await pause(1500);
-    for(const [href,title] of [['#for-you','раздел «Для кого»'],['#approach','раздел «Подход»'],['#consultation','описание консультации'],['#faq','раскрывающиеся вопросы']]){
-      await page.locator(`.desktop-nav a[href="${href}"]`).click(); await label(title); await pause();
-    }
-    for(const item of await page.locator('details').all()){
-      await item.locator('summary').click(); await pause(550); await item.locator('summary').click();
-    }
-    await page.locator('.header-cta').click(); await label('проверка обязательных полей');
-    await page.locator('#booking-form button').click(); await pause(1300);
-    await page.locator('#name').fill('Тестовая заявка');
-    await page.locator('#topic').selectOption({index:2});
-    await page.locator('#time').fill('Тест: вечером по Москве');
-    await label('имя, тема и удобное время'); await pause(1000);
-    await page.locator('#booking-form button').click(); await label('подготовленный текст письма'); await pause(1500);
-    await page.locator('#email-message').fill((await page.locator('#email-message').inputValue())+'\nЭто демонстрация, отправка не выполняется.');
-    await label('текст можно отредактировать'); await pause(1000);
-    await page.locator('#copy-message').click(); await label('копирование в буфер'); await pause(1200);
-    await page.locator('#open-email').click(); await label('ссылка на почту проверена, письмо не отправлено'); await pause(1400);
-    await page.locator('#email-dialog .dialog-close').click();
-    await page.locator('#privacy-button').click(); await label('окно информации о данных'); await pause(1700);
-    await page.keyboard.press('Escape'); await label('закрытие клавишей Escape'); await pause(900);
-    await page.locator('header .brand').click(); await label('возврат к началу страницы'); await pause(1300);
-  });
-  console.log('Сохранена демонстрация настольной версии');
-  await record('mobile-demo',{width:375,height:812},true,async(page,label,pause)=>{
-    await label('экран телефона 375 × 812'); await pause(1500);
-    await page.locator('.header-cta').tap(); await label('быстрый переход к записи'); await pause(1200);
-    await page.locator('#name').fill('Тест на телефоне'); await page.locator('#topic').selectOption({index:1});
-    await page.locator('#booking-form button').tap(); await label('окно письма на телефоне'); await pause(1500);
-    await page.locator('#copy-message').tap(); await label('копирование письма'); await pause(1300);
-    await page.locator('#email-dialog .dialog-close').tap();
-    await page.locator('#privacy-button').tap(); await label('информация о данных'); await pause(1500);
-    await page.locator('#privacy-dialog .dialog-close').tap();
-    const item=page.locator('details').first();await item.locator('summary').tap();await label('вопросы раскрываются касанием');await pause(1400);
-    await item.locator('summary').tap();await page.locator('header .brand').tap();await label('главная страница');await pause(1400);
-  });
-  console.log('Сохранена демонстрация мобильной версии');
-} finally { await browser.close(); }
+try{
+ if(!process.argv.includes('--verify-only')){
+  await record('desktop-demo',{width:1280,height:800},false);
+  await record('mobile-demo',{width:375,height:812},true);
+ }
+ const checkFile=join(root,'.cache/browser-check/site-video-check.html');
+ await writeFile(checkFile,'<!doctype html><meta charset="utf-8">'+['desktop-demo','mobile-demo'].map(name=>'<video muted autoplay src="'+pathToFileURL(join(dir,name+'.webm')).href+'"></video>').join(''));
+ const page=await browser.newPage();
+ await page.goto(pathToFileURL(checkFile).href);
+ // Второй ролик может остаться на паузе при автозапуске: запускаем оба явно.
+ await page.locator('video').evaluateAll(items=>Promise.all(items.map(v=>v.play())));
+ await page.waitForFunction(()=>[...document.querySelectorAll('video')].every(v=>v.readyState>=2&&v.currentTime>0),{},{timeout:10000});
+ const videos=await page.locator('video').evaluateAll(items=>items.map(v=>({file:v.src.split('/').at(-1),duration:v.duration,width:v.videoWidth,height:v.videoHeight,readyState:v.readyState,error:v.error?.message||null})));
+ await writeFile(join(dir,'demo-metadata.json'),JSON.stringify({date:new Date().toISOString(),browser:browser.version(),videos},null,2)+'\n');
+ console.log('Оба видео успешно воспроизводятся.');
+}finally{await browser.close();}
