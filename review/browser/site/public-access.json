@@ -1,0 +1,69 @@
+{
+  "date": "2026-11-02T18:31:54.537Z",
+  "url": "http://199.195.196.219:5601/",
+  "requestOrigin": "Браузеры запущены на сервере проекта; это не проверка с устройства посетителя",
+  "cases": [
+    {
+      "engine": "chromium",
+      "version": "156.0.8078.4",
+      "width": 1440,
+      "status": "PASS",
+      "secureContext": false,
+      "clipboardAvailable": false,
+      "copyStatus": "Автоматическое копирование недоступно. Текст выделен: скопируйте его вручную и вставьте в письмо.",
+      "pagesChecked": 6,
+      "requiredFieldChecked": true,
+      "editedMailLinkChecked": true,
+      "realMailSent": false,
+      "javascriptErrors": [],
+      "failedRequests": []
+    },
+    {
+      "engine": "chromium",
+      "version": "156.0.8078.4",
+      "width": 375,
+      "status": "PASS",
+      "secureContext": false,
+      "clipboardAvailable": false,
+      "copyStatus": "Автоматическое копирование недоступно. Текст выделен: скопируйте его вручную и вставьте в письмо.",
+      "pagesChecked": 6,
+      "requiredFieldChecked": true,
+      "editedMailLinkChecked": true,
+      "realMailSent": false,
+      "javascriptErrors": [],
+      "failedRequests": []
+    },
+    {
+      "engine": "firefox",
+      "version": "157.0",
+      "width": 1440,
+      "status": "PASS",
+      "secureContext": false,
+      "clipboardAvailable": false,
+      "copyStatus": "Автоматическое копирование недоступно. Текст выделен: скопируйте его вручную и вставьте в письмо.",
+      "pagesChecked": 6,
+      "requiredFieldChecked": true,
+      "editedMailLinkChecked": true,
+      "realMailSent": false,
+      "javascriptErrors": [],
+      "failedRequests": []
+    },
+    {
+      "engine": "firefox",
+      "version": "157.0",
+      "width": 375,
+      "status": "PASS",
+      "secureContext": false,
+      "clipboardAvailable": false,
+      "copyStatus": "Автоматическое копирование недоступно. Текст выделен: скопируйте его вручную и вставьте в письмо.",
+      "pagesChecked": 6,
+      "requiredFieldChecked": true,
+      "editedMailLinkChecked": true,
+      "realMailSent": false,
+      "javascriptErrors": [],
+      "failedRequests": []
+    }
+  ],
+  "passed": 4,
+  "failed": 0
+}
