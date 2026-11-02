@@ -5,10 +5,12 @@ import { browsers, root, output, baseURL, interceptMail } from './common.mjs';
 
 const dir=join(output,'site');
 await mkdir(dir,{recursive:true});
+const videoCache=join(root,'.cache/browser-check/videos');
+await mkdir(videoCache,{recursive:true});
 const pages=[['index.html','Главная'],['about.html','Обо мне'],['consultation.html','Консультация'],['materials.html','Материалы'],['contacts.html','Контакты и документы'],['club.html','Клуб']];
 const browser=await browsers.chromium.launch({headless:true});
 async function record(name,viewport,mobile){
- const context=await browser.newContext({viewport,locale:'ru-RU',isMobile:mobile,hasTouch:mobile,recordVideo:{dir,size:viewport}});
+ const context=await browser.newContext({viewport,locale:'ru-RU',isMobile:mobile,hasTouch:mobile,recordVideo:{dir:videoCache,size:viewport}});
  await context.grantPermissions(['clipboard-read','clipboard-write'],{origin:new URL(baseURL).origin});
  await interceptMail(context);
  const page=await context.newPage(),video=page.video();
@@ -56,12 +58,16 @@ async function record(name,viewport,mobile){
  console.log('Записано видео: '+name);
 }
 try{
- await record('desktop-demo',{width:1280,height:800},false);
- await record('mobile-demo',{width:375,height:812},true);
+ if(!process.argv.includes('--verify-only')){
+  await record('desktop-demo',{width:1280,height:800},false);
+  await record('mobile-demo',{width:375,height:812},true);
+ }
  const checkFile=join(root,'.cache/browser-check/site-video-check.html');
  await writeFile(checkFile,'<!doctype html><meta charset="utf-8">'+['desktop-demo','mobile-demo'].map(name=>'<video muted autoplay src="'+pathToFileURL(join(dir,name+'.webm')).href+'"></video>').join(''));
  const page=await browser.newPage();
  await page.goto(pathToFileURL(checkFile).href);
+ // Второй ролик может остаться на паузе при автозапуске: запускаем оба явно.
+ await page.locator('video').evaluateAll(items=>Promise.all(items.map(v=>v.play())));
  await page.waitForFunction(()=>[...document.querySelectorAll('video')].every(v=>v.readyState>=2&&v.currentTime>0),{},{timeout:10000});
  const videos=await page.locator('video').evaluateAll(items=>items.map(v=>({file:v.src.split('/').at(-1),duration:v.duration,width:v.videoWidth,height:v.videoHeight,readyState:v.readyState,error:v.error?.message||null})));
  await writeFile(join(dir,'demo-metadata.json'),JSON.stringify({date:new Date().toISOString(),browser:browser.version(),videos},null,2)+'\n');

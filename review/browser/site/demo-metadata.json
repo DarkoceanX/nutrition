@@ -1,0 +1,22 @@
+{
+  "date": "2026-11-02T18:19:51.609Z",
+  "browser": "156.0.8078.4",
+  "videos": [
+    {
+      "file": "desktop-demo.webm",
+      "duration": 19.36,
+      "width": 1280,
+      "height": 800,
+      "readyState": 4,
+      "error": null
+    },
+    {
+      "file": "mobile-demo.webm",
+      "duration": 20.04,
+      "width": 374,
+      "height": 812,
+      "readyState": 4,
+      "error": null
+    }
+  ]
+}
